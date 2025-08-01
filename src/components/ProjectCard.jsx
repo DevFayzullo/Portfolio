@@ -13,8 +13,8 @@ function ProjectCard({ nomi, izoh, link }) {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
-        Ko‘rish
+        className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+        View on GITHUB
       </a>
     </motion.div>
   );
