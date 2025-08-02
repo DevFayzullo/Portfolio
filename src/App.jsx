@@ -43,17 +43,25 @@ function App() {
     <div className="bg-gray-900 text-white min-h-screen font-sans">
       <div className="max-w-5xl mx-auto p-6">
         <nav className="flex flex-wrap justify-between items-center gap-4 sticky top-0 bg-gray-900 shadow px-4 py-3 z-50">
-          <a href="#portfolio" className="text-blue-400 font-semibold">
+          <a
+            href="#portfolio"
+            className="text-blue-400 font-semibold hover:text-blue-300 transition">
             Portfolio
           </a>
-          <a href="#about" className="text-blue-400 font-semibold">
+          <a
+            href="#about"
+            className="text-blue-400 font-semibold hover:text-blue-300 transition">
             About
           </a>
-          <a href="#contact" className="text-blue-400 font-semibold">
+          <a
+            href="#contact"
+            className="text-blue-400 font-semibold hover:text-blue-300 transition">
             Contact
           </a>
           <div className="md:hidden ml-auto">
-            <button onClick={() => setMenuOpen(!menuOpen)}>
+            <button
+              onClick={() => setMenuOpen(!menuOpen)}
+              className="hover:scale-110 transition">
               <FaBars />
             </button>
           </div>
@@ -112,7 +120,7 @@ function App() {
             className="w-full p-3 border rounded bg-gray-800 text-white border-gray-600"></textarea>
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition">
+            className="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 hover:scale-105 transition">
             Send Message
           </button>
         </form>
@@ -123,14 +131,14 @@ function App() {
             href="https://t.me/your_telegram_channel"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline text-blue-400">
+            className="underline text-blue-400 hover:text-blue-300 transition">
             Telegram Blog
           </a>
           <a
             href="https://blog.naver.com/your_naver_blog"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline text-blue-400">
+            className="underline text-blue-400 hover:text-blue-300 transition">
             Naver Blog
           </a>
         </div>
@@ -141,25 +149,29 @@ function App() {
             <a
               href="https://github.com/your_username"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 transition">
               <FaGithub />
             </a>
             <a
               href="https://linkedin.com/in/your_username"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 transition">
               <FaLinkedin />
             </a>
             <a
               href="https://twitter.com/your_username"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 transition">
               <FaTwitter />
             </a>
             <a
               href="https://instagram.com/your_username"
               target="_blank"
-              rel="noopener noreferrer">
+              rel="noopener noreferrer"
+              className="hover:text-blue-400 transition">
               <FaInstagram />
             </a>
           </div>
