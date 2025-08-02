@@ -23,10 +23,10 @@ function App() {
     e.preventDefault();
     emailjs
       .sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_p1uyau5",
+        "Gmail",
         formRef.current,
-        "YOUR_PUBLIC_KEY"
+        "L6Q9QKegGJNWV43K7"
       )
       .then(() => {
         setJavob("✅ Your message has been sent!");
@@ -147,28 +147,28 @@ function App() {
           <p className="mb-4">Connect with me:</p>
           <div className="flex justify-center gap-6 text-2xl">
             <a
-              href="https://github.com/your_username"
+              href="https://github.com/DevFayzullo"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-400 transition">
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/your_username"
+              href="https://linkedin.com/in/fayzullo-abduganiev"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-400 transition">
               <FaLinkedin />
             </a>
             <a
-              href="https://twitter.com/your_username"
+              href="https://twitter.com/FayzulloDev"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-400 transition">
               <FaTwitter />
             </a>
             <a
-              href="https://instagram.com/your_username"
+              href="https://instagram.com/abduganiyevfayzullo"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-400 transition">
@@ -176,7 +176,7 @@ function App() {
             </a>
           </div>
           <p className="mt-4 text-sm text-gray-400">
-            © {new Date().getFullYear()} Your Name. All rights reserved.
+            © {new Date().getFullYear()} DevFayzullo. All rights reserved.
           </p>
         </footer>
       </div>
