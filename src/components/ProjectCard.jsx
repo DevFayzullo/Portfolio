@@ -1,14 +1,14 @@
 import { motion } from "framer-motion";
 
-function ProjectCard({ nomi, izoh, link }) {
+function ProjectCard({ name, description, link }) {
   return (
     <motion.div
       className="bg-white dark:bg-gray-800 text-gray-800 dark:text-white p-6 rounded-lg shadow-md hover:shadow-xl transition hover:scale-105"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}>
-      <h3 className="text-xl font-bold mb-2">{nomi}</h3>
-      <p className="mb-4">{izoh}</p>
+      <h3 className="text-xl font-bold mb-2">{name}</h3>
+      <p className="mb-4">{description}</p>
       <a
         href={link}
         target="_blank"

@@ -1,16 +1,19 @@
-[
-  
+[ 
   {
-    "nomi": "To-Do List",
-    "izoh": "Vazifalarni qo‘shish/o‘chirish interaktiv ro‘yxat",
+    "name": "To-Do App",
+    "description": "A modern, responsive, and fully-functional To-Do List application built with HTML, CSS, and JavaScript",
     "link": "https://github.com/DevFayzullo/To-Do-App"
   },
   {
-    "nomi": "Register Form",
-    "izoh": "Validatsiyali ro‘yxatdan o‘tish sahifasi",
-    "link": "https://github.com/DevFayzullo/JS-Projects"
+    "name": "Rest Countries Explorer",
+    "description": "Explore and filter countries with real-time data from the REST Countries API. A lightweight, responsive app built using Webpack and Babel.",
+    "link": "https://github.com/DevFayzullo/rest-countries-explorer"
+  },
+  {
+    "name": "CHATBOT-UI",
+    "description": "Static AI ChatBot interface (with predefined responses)",
+    "link": "https://github.com/DevFayzullo/chatbot-ui"
   }
-    
 ]
 
 
