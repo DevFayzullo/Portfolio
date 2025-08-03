@@ -128,14 +128,14 @@ function App() {
 
         <div className="mt-16 text-center space-x-4">
           <a
-            href="https://t.me/your_telegram_channel"
+            href="https://t.me/devFayzullo"
             target="_blank"
             rel="noopener noreferrer"
             className="underline text-blue-400 hover:text-blue-300 transition">
             Telegram Blog
           </a>
           <a
-            href="https://blog.naver.com/your_naver_blog"
+            href="https://blog.naver.com/devfayzullo"
             target="_blank"
             rel="noopener noreferrer"
             className="underline text-blue-400 hover:text-blue-300 transition">
@@ -154,7 +154,7 @@ function App() {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/fayzullo-abduganiev"
+              href="https://linkedin.com/in/abduganiev-fayzullo"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-blue-400 transition">
