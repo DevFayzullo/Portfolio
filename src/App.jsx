@@ -58,13 +58,6 @@ function App() {
             className="text-blue-400 font-semibold hover:text-blue-300 transition">
             Contact
           </a>
-          <div className="md:hidden ml-auto">
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className="hover:scale-110 transition">
-              <FaBars />
-            </button>
-          </div>
         </nav>
 
         <h1
