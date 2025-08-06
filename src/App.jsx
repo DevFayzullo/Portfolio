@@ -2,14 +2,12 @@ import { useEffect, useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 import ProjectCard from "./components/ProjectCard";
 import Loading from "./components/Loading";
-import { FaBars } from "react-icons/fa";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 function App() {
   const [projects, setProjects] = useState([]);
   const [javob, setJavob] = useState("");
   const [loading, setLoading] = useState(true);
-  const [menuOpen, setMenuOpen] = useState(false);
   const formRef = useRef();
 
   useEffect(() => {

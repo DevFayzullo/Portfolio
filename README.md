@@ -61,7 +61,7 @@ npm run dev
 
 ## 📸 Screenshots
 
-![Portfolio Preview](./assets/preview.png)
+![Portfolio Preview](./public/preview.png)
 
 ---
 
@@ -86,12 +86,11 @@ For any questions, feel free to contact me via:
 
 This project is open-source. You can use and modify it for personal or professional portfolios.
 
-
 ---
 
 ## 🧠 Quote
 
 > "The only way to do great work is to love what you do."  
-> — *Steve Jobs*
+> — _Steve Jobs_
 
 Happy Coding😊
