@@ -1,4 +1,4 @@
-# Portfolio# 💼 Developer Portfolio
+💼 Developer Portfolio
 
 A modern, responsive personal portfolio built with **React**, **Tailwind CSS**, and **EmailJS**.  
 Includes dark mode, contact form, blog links, and social media footer.
@@ -45,7 +45,7 @@ src/
 
 ```bash
 # Clone the repository
-git clone https://github.com/your_username/portfolio.git
+git clone https://github.com/DevFayzullo/portfolio.git
 cd portfolio
 
 # Install dependencies
@@ -77,8 +77,8 @@ npm run dev
 
 For any questions, feel free to contact me via:
 
-- Telegram: [@your_username](https://t.me/devFayzullo)
-- Naver Blog: [your_blog](https://blog.naver.com/devfayzullo)
+- Telegram: [@Fayzullo's Life](https://t.me/devFayzullo)
+- Naver Blog: [줄로](https://blog.naver.com/devfayzullo)
 
 ---
 
