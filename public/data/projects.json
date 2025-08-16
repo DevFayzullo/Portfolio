@@ -31,12 +31,12 @@
   },
   {
     "name": "HealthyPentagon",
-    "description": "건강한 식단, 믿을 수 있는 식재료, 사용자 리뷰 등을 포함한 웹 기반 식품 정보 플랫폼입니다",
+    "description": "Healthy diet & product review platform (JSP + MySQL + Tomcat) ",
     "link": "https://github.com/DevFayzullo/HealthyPentagon"
   },
   {
     "name": "Digital-closet",
-    "description": "사용자가 옷을 디지털로 정리하고, 코디를 계획하며, 옷장을 체계적으로 관리할 수 있도록 도와주는 플랫폼입니다",
+    "description": "Digital wardrobe manager to organize clothes and create outfits",
     "link": "https://github.com/DevFayzullo/Digital-closet"
   },
   {
