@@ -1,4 +1,4 @@
-💼 Developer Portfolio
+## 💼 Developer Portfolio
 
 A modern, responsive personal portfolio built with **React**, **Tailwind CSS**, and **EmailJS**.  
 Includes dark mode, contact form, blog links, and social media footer.
@@ -78,7 +78,7 @@ npm run dev
 For any questions, feel free to contact me via:
 
 - Telegram: [@Fayzullo's Life](https://t.me/devFayzullo)
-- Naver Blog: [줄로](https://blog.naver.com/devfayzullo)
+- Naver Blog: [@Fayzullo's Life](https://blog.naver.com/devfayzullo)
 
 ---
 
