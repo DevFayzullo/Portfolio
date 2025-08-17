@@ -78,7 +78,7 @@ npm run dev
 For any questions, feel free to contact me via:
 
 - Telegram: [@Fayzullo's Life](https://t.me/devFayzullo)
-- Naver Blog: [@줄로](https://blog.naver.com/devfayzullo)
+- Naver Blog: [줄로](https://blog.naver.com/devfayzullo)
 
 ---
 
