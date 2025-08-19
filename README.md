@@ -61,7 +61,7 @@ npm run dev
 
 ## 📸 Screenshots
 
-![Portfolio Preview](./public/preview.png)
+![Portfolio Preview](./public/pic/preview.png)
 
 ---
 
