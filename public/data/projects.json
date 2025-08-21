@@ -37,24 +37,6 @@
     "cover": "/projects/chatbot-ui/cover.webp"
   },
   {
-    "id": "digital-closet",
-    "title": "Digital Closet",
-    "slug": "digital-closet",
-    "short": "Digital wardrobe manager to organize clothes, tag items, and compose outfits.",
-    "stack": ["React", "Vite", "Tailwind"],
-    "role": "Frontend",
-    "year": 2025,
-    "links": {
-      "repo": "https://github.com/DevFayzullo/Digital-closet"
-    },
-    "highlights": ["Tag & filter", "Image handling", "Saved outfits"],
-    "category": "Web App",
-    "featured": false,
-    "visibility": "public",
-    "order": 3,
-    "cover": "/projects/digital-closet/cover.webp"
-  },
-  {
     "id": "ecommerce",
     "title": "Mini Store (Cart & Checkout)",
     "slug": "mini-store",
@@ -63,6 +45,7 @@
     "role": "Frontend",
     "year": 2024,
     "links": {
+      "demo": "https://devfayzullo.github.io/E-Commerce-Project/",
       "repo": "https://github.com/DevFayzullo/E-Commerce-Project"
     },
     "highlights": ["Cart state", "Checkout form", "Responsive UI"],
@@ -89,24 +72,5 @@
     "visibility": "public",
     "order": 5,
     "cover": "/projects/healthy-pentagon/cover.webp"
-  },
-  {
-    "id": "dorm-project",
-    "title": "Dorm Check‑in/Out System",
-    "slug": "dorm-checkin",
-    "short": "University dormitory management (check‑in/out) with admin views.",
-    "stack": ["(Your stack)"],
-    "role": "Fullstack",
-    "year": 2024,
-    "links": {
-      "demo": "https://kbu-dorm.kr",
-      "repo": "https://github.com/DevFayzullo/dorm-project"
-    },
-    "highlights": ["Admin dashboard", "CRUD workflows", "Role‑based flows"],
-    "category": "Fullstack",
-    "featured": false,
-    "visibility": "public",
-    "order": 6,
-    "cover": "/projects/dorm/cover.webp"
   }
 ]
