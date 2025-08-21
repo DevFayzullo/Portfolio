@@ -1,14 +1,17 @@
 import { useParams, Link } from "react-router-dom";
-import projects from "../data/projects.json";
+import projectsData from "../data/projects.json";
 
 export default function Project() {
   const { slug } = useParams();
-  const project = projects.find((p) => p.slug === slug);
+  const project = (projectsData || []).find((p) => p.slug === slug);
 
   if (!project) {
     return (
       <main className="mx-auto max-w-3xl px-4 py-10">
-        <p className="mb-4">Project not found.</p>
+        <h1 className="text-2xl font-bold mb-4">Project not found</h1>
+        <p className="mb-6 text-gray-300">
+          The project you’re looking for doesn’t exist or is hidden.
+        </p>
         <Link to="/projects" className="underline underline-offset-4">
           ← Back to projects
         </Link>
@@ -23,6 +26,9 @@ export default function Project() {
       </Link>
 
       <h1 className="mt-4 text-3xl font-bold">{project.title}</h1>
+      {project.year && (
+        <p className="mt-1 text-sm text-gray-400">Year: {project.year}</p>
+      )}
       <p className="mt-2 text-neutral-300">{project.short}</p>
 
       {project.cover && (
@@ -37,16 +43,18 @@ export default function Project() {
         />
       )}
 
-      <section className="mt-6 space-y-2">
-        <h2 className="text-xl font-semibold">Stack</h2>
-        <ul className="flex flex-wrap gap-2">
-          {project.stack?.map((s) => (
-            <li key={s} className="rounded-lg border px-2 py-1 text-xs">
-              {s}
-            </li>
-          ))}
-        </ul>
-      </section>
+      {project.stack?.length ? (
+        <section className="mt-6 space-y-2">
+          <h2 className="text-xl font-semibold">Stack</h2>
+          <ul className="flex flex-wrap gap-2">
+            {project.stack.map((s) => (
+              <li key={s} className="rounded-lg border px-2 py-1 text-xs">
+                {s}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
 
       {project.highlights?.length ? (
         <section className="mt-6">
@@ -59,7 +67,22 @@ export default function Project() {
         </section>
       ) : null}
 
-      {project.links?.demo || project.links?.repo ? (
+      {project.metrics &&
+        (project.metrics.lighthouse || project.metrics.bundleKB) && (
+          <section className="mt-6">
+            <h2 className="text-xl font-semibold">Metrics</h2>
+            <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-gray-200">
+              {project.metrics.lighthouse != null && (
+                <li>Lighthouse: {project.metrics.lighthouse}</li>
+              )}
+              {project.metrics.bundleKB != null && (
+                <li>Bundle size: {project.metrics.bundleKB} KB</li>
+              )}
+            </ul>
+          </section>
+        )}
+
+      {(project.links?.demo || project.links?.repo) && (
         <section className="mt-6">
           <h2 className="text-xl font-semibold">Links</h2>
           <div className="mt-2 flex gap-4">
@@ -81,6 +104,24 @@ export default function Project() {
                 GitHub Repo
               </a>
             )}
+          </div>
+        </section>
+      )}
+
+      {project.images?.length ? (
+        <section className="mt-8">
+          <h2 className="text-xl font-semibold mb-2">Gallery</h2>
+          <div className="grid grid-cols-2 gap-3">
+            {project.images.map((src) => (
+              <img
+                key={src}
+                src={src}
+                alt={`${project.title} screenshot`}
+                loading="lazy"
+                decoding="async"
+                className="rounded-lg border border-neutral-800 object-cover"
+              />
+            ))}
           </div>
         </section>
       ) : null}
