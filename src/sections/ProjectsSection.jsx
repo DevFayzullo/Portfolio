@@ -6,7 +6,7 @@ const sampleProjects = [
     id: 1,
     title: "ChatBot UI",
     description:
-      "Static chatbot interface built with React + Tailwind. Responsive design, typing animation, and predefined replies.",
+      "Static chatbot interface built with React + Tailwind. Responsive, typing animation, predefined replies.",
     image: "/projects/chatbot-ui.png",
     tags: ["React", "Tailwind"],
     github: "https://github.com/DevFayzullo/chatbot-ui",
@@ -16,7 +16,7 @@ const sampleProjects = [
     id: 2,
     title: "Rest Countries Explorer",
     description:
-      "JS web app showing country details with filter & search. API integration, light/dark mode support.",
+      "JS app with API integration: country details, filter/search, light/dark theme.",
     image: "/projects/rest-countries.png",
     tags: ["JavaScript", "API"],
     github: "https://github.com/DevFayzullo/rest-countries-explorer",

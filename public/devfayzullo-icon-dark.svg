@@ -1,0 +1,5 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" fill="#0A0A0A"/>
+  <rect x="64" y="64" width="384" height="384" fill="none" stroke="#EEF0F1" stroke-width="28"/>
+  <text x="256" y="340" text-anchor="middle" font-family="Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-weight="800" font-size="300" fill="#EEF0F1">F</text>
+</svg>

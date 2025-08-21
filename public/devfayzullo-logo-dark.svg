@@ -1,0 +1,9 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#0A0A0A"/>
+  <g transform="translate(128,144)">
+    <rect x="0" y="0" width="315" height="315" fill="none" stroke="#EEF0F1" stroke-width="26"/>
+    <text x="158" y="235" text-anchor="middle" font-family="Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-weight="800" font-size="230" fill="#EEF0F1">F</text>
+  </g>
+  <text x="507" y="320" font-family="Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-weight="800" font-size="150" fill="#EEF0F1">DevFayzullo</text>
+  <text x="507" y="460" font-family="Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="110" fill="#1877F2">Frontend Developer</text>
+</svg>

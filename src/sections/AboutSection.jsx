@@ -2,7 +2,10 @@ import { Link } from "react-router-dom";
 import ResumeButtons from "../components/ResumeButtons.jsx";
 import SectionTitle from "../components/SectionTitle.jsx";
 
-export default function AboutSection({ variant = "full" }) {
+export default function AboutSection({
+  variant = "full",
+  name = "DevFayzullo",
+}) {
   const isCompact = variant === "compact";
 
   return (
@@ -17,21 +20,19 @@ export default function AboutSection({ variant = "full" }) {
         />
 
         {/* Intro */}
-        <div className="mt-4 text-center">
+        <div className="mt-5 text-center">
           <p className="mx-auto max-w-3xl text-lg leading-relaxed text-gray-700 dark:text-gray-300">
             Hello! I’m{" "}
             <span className="font-semibold text-blue-600 dark:text-blue-400">
-              DevFayzullo
+              {name}
             </span>
-            , a dedicated{" "}
-            <span className="font-semibold">Frontend Developer</span> focused on
-            building clean, accessible, and performant web apps using{" "}
-            <span className="font-semibold">React</span> and{" "}
-            <span className="font-semibold">Tailwind CSS</span>. I care about
-            great UX, readability, and maintainable component architecture.
+            , a <span className="font-semibold">Frontend Developer</span> who
+            enjoys building clean, accessible, and performant web applications
+            using <span className="font-semibold">React</span> and{" "}
+            <span className="font-semibold">Tailwind CSS</span>. I value good
+            UX, readable code, and component-driven architecture.
           </p>
 
-          {/* Buttons */}
           {!isCompact && <ResumeButtons />}
 
           {isCompact && (
@@ -54,6 +55,28 @@ export default function AboutSection({ variant = "full" }) {
             </div>
           )}
         </div>
+
+        {/* Quick Stats (only full) */}
+        {!isCompact && (
+          <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { k: "Projects", v: "10+" },
+              { k: "Stacks", v: "React, TS, Tailwind" },
+              { k: "Focus", v: "UI/UX & Perf" },
+              { k: "Learning", v: "Next.js & Testing" },
+            ].map((s) => (
+              <div
+                key={s.k}
+                className="rounded-xl border border-gray-200 dark:border-gray-800 p-4 text-center
+                           transition-transform transform-gpu duration-300 hover:scale-105 hover:shadow-md">
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  {s.k}
+                </p>
+                <p className="mt-1 text-lg font-semibold">{s.v}</p>
+              </div>
+            ))}
+          </div>
+        )}
 
         {/* Content Cards */}
         <div
@@ -89,9 +112,9 @@ export default function AboutSection({ variant = "full" }) {
                 "TypeScript (learning)",
                 "JavaScript (ES6+)",
                 "Tailwind CSS",
-                "Redux Toolkit",
-                "React Query",
                 "REST APIs",
+                "Sass",
+                "Webpack",
                 "Git / GitHub",
               ].map((t) => (
                 <span
@@ -106,11 +129,10 @@ export default function AboutSection({ variant = "full" }) {
 
           {/* Experience */}
           <div
-            className={`rounded-2xl border border-gray-200 dark:border-gray-800 p-6 ${
-              isCompact ? "md:col-span-2" : "md:col-span-2"
-            } transform-gpu transition-transform duration-300 ease-out
+            className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 md:col-span-2
+                       transform-gpu transition-transform duration-300 ease-out
                        hover:scale-105 hover:shadow-lg
-                       hover:border-gray-300 dark:hover:border-gray-700`}>
+                       hover:border-gray-300 dark:hover:border-gray-700">
             <h3 className="text-xl font-semibold">Experience</h3>
             <ul className="mt-3 space-y-4">
               <li>
@@ -142,7 +164,7 @@ export default function AboutSection({ variant = "full" }) {
                        hover:border-gray-300 dark:hover:border-gray-700">
             <h3 className="text-xl font-semibold">Education</h3>
             <ul className="mt-3 list-disc pl-5 text-gray-700 dark:text-gray-300 space-y-1">
-              <li>Software Convergence — University (ongoing)</li>
+              <li>Software Convergence — Kyungbok University (ongoing)</li>
               <li>
                 Self‑learning: React, TypeScript, Redux Toolkit, SEO basics
               </li>
@@ -164,13 +186,14 @@ export default function AboutSection({ variant = "full" }) {
           </div>
         </div>
 
-        {/* Extra CTA for full page */}
+        {/* Footer CTA for full page */}
         {!isCompact && (
           <div className="mt-10 flex items-center justify-center gap-3">
             <Link
               to="/projects"
               className="inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold
-                         bg-blue-600 text-white hover:bg-blue-700 transition-colors">
+                         bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+              aria-label="See projects">
               See My Projects
             </Link>
             <a

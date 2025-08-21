@@ -15,7 +15,7 @@ export default function ContactSection({ variant = "full" }) {
             className="mx-auto max-w-lg flex flex-col gap-4"
             onSubmit={(e) => {
               e.preventDefault();
-              alert("Message sent! (Connect EmailJS here)");
+              alert("Message sent! (Integrate EmailJS here)");
             }}>
             <input
               type="text"
