@@ -8,11 +8,13 @@ export default function Project() {
   if (!project) {
     return (
       <main className="mx-auto max-w-3xl px-4 py-10">
-        <h1 className="text-2xl font-bold mb-4">Project not found</h1>
+        <h1 className="mb-4 text-2xl font-bold">Project not found</h1>
         <p className="mb-6 text-gray-300">
           The project you’re looking for doesn’t exist or is hidden.
         </p>
-        <Link to="/projects" className="underline underline-offset-4">
+        <Link
+          to="/projects"
+          className="transition transform underline underline-offset-4 hover:scale-105">
           ← Back to projects
         </Link>
       </main>
@@ -21,7 +23,9 @@ export default function Project() {
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-10">
-      <Link to="/projects" className="underline underline-offset-4">
+      <Link
+        to="/projects"
+        className="transition transform underline underline-offset-4 hover:scale-105">
         ← Back to projects
       </Link>
 
@@ -91,7 +95,7 @@ export default function Project() {
                 href={project.links.demo}
                 target="_blank"
                 rel="noreferrer"
-                className="underline underline-offset-4">
+                className="transition transform underline underline-offset-4 hover:scale-105">
                 Live Demo
               </a>
             )}
@@ -100,7 +104,7 @@ export default function Project() {
                 href={project.links.repo}
                 target="_blank"
                 rel="noreferrer"
-                className="underline underline-offset-4">
+                className="transition transform underline underline-offset-4 hover:scale-105">
                 GitHub Repo
               </a>
             )}
@@ -110,7 +114,7 @@ export default function Project() {
 
       {project.images?.length ? (
         <section className="mt-8">
-          <h2 className="text-xl font-semibold mb-2">Gallery</h2>
+          <h2 className="mb-2 text-xl font-semibold">Gallery</h2>
           <div className="grid grid-cols-2 gap-3">
             {project.images.map((src) => (
               <img

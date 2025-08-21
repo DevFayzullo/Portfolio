@@ -2,7 +2,6 @@ import projectsData from "../data/projects.json";
 import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {
-  // Faqat ko‘rinadiganlarini ko‘rsatamiz va tartiblaymiz
   const projects = (projectsData || [])
     .filter((p) => (p.visibility ?? "public") === "public")
     .sort(

@@ -1,45 +1,42 @@
-// at top
 import { Routes, Route, NavLink } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Project from "./pages/Project";
+import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
-// helper to style active links
+// Active/hover stil helper
 const navClasses = ({ isActive }) =>
-  `font-semibold transition ${
+  `font-semibold transition transform ${
     isActive
       ? "text-white underline underline-offset-4"
-      : "text-blue-400 hover:text-blue-300"
+      : "text-blue-400 hover:text-blue-300 hover:underline hover:underline-offset-4 hover:scale-105"
   }`;
 
 export default function App() {
   return (
     <div className="bg-gray-900 text-white min-h-screen font-sans">
-      <div className="max-w-5xl mx-auto p-6">
+      <div className="mx-auto max-w-5xl p-6">
         {/* Header / Nav */}
-        <nav className="flex flex-wrap justify-between items-center gap-4 sticky top-0 bg-gray-900/95 backdrop-blur shadow px-4 py-3 z-50">
-          <NavLink to="/" className={navClasses}>
+        <nav className="sticky top-0 z-50 flex flex-wrap items-center justify-between gap-4 bg-gray-900/95 px-4 py-3 shadow backdrop-blur">
+          <NavLink to="/" className={navClasses} aria-label="Home">
             DevFayzullo
           </NavLink>
-
           <div className="flex gap-6">
-            {/* Active class when on /projects */}
             <NavLink to="/projects" className={navClasses}>
               Projects
             </NavLink>
-
-            {/* Smooth scroll to sections on Home (works from any route) */}
+            {/* Smooth scroll to Home sections from any route */}
             <HashLink
               smooth
               to="/#about"
-              className="text-blue-400 hover:text-blue-300 font-semibold transition">
+              className="font-semibold text-blue-400 transition transform hover:text-blue-300 hover:underline hover:underline-offset-4 hover:scale-105">
               About
             </HashLink>
             <HashLink
               smooth
               to="/#contact"
-              className="text-blue-400 hover:text-blue-300 font-semibold transition">
+              className="font-semibold text-blue-400 transition transform hover:text-blue-300 hover:underline hover:underline-offset-4 hover:scale-105">
               Contact
             </HashLink>
           </div>
@@ -52,12 +49,6 @@ export default function App() {
           <Route path="/projects/:slug" element={<Project />} />
           <Route path="*" element={<div className="p-6">Not found</div>} />
         </Routes>
-
-        <footer className="mt-16 border-t border-gray-700 pt-6 text-center">
-          <p className="text-sm text-gray-400">
-            © {new Date().getFullYear()} DevFayzullo. All rights reserved.
-          </p>
-        </footer>
       </div>
     </div>
   );

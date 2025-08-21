@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 export default function ProjectCard({ project }) {
   return (
-    <article className="rounded-2xl border border-neutral-800 bg-neutral-900/50 p-4 shadow">
+    <article className="group rounded-2xl border border-neutral-800 bg-neutral-900/50 p-4 shadow transition transform hover:scale-[1.02] hover:bg-neutral-800">
       <header className="mb-3">
         <h3 className="text-lg font-semibold">
           <Link
             to={`/projects/${project.slug}`}
-            className="underline-offset-4 hover:underline focus:outline-none focus-visible:ring">
+            className="transition underline-offset-4 group-hover:text-blue-400 group-hover:underline">
             {project.title}
           </Link>
         </h3>
@@ -21,7 +21,7 @@ export default function ProjectCard({ project }) {
           decoding="async"
           width="800"
           height="450"
-          className="mb-3 aspect-video w-full rounded-lg object-cover"
+          className="mb-3 aspect-video w-full rounded-lg object-cover transition group-hover:opacity-90"
         />
       )}
 
@@ -29,7 +29,9 @@ export default function ProjectCard({ project }) {
 
       <ul className="mb-4 flex flex-wrap gap-2" aria-label="Technology stack">
         {project.stack?.map((s) => (
-          <li key={s} className="rounded-lg border px-2 py-1 text-xs">
+          <li
+            key={s}
+            className="rounded-lg border px-2 py-1 text-xs transition group-hover:border-blue-400 group-hover:text-blue-300">
             {s}
           </li>
         ))}
@@ -38,7 +40,7 @@ export default function ProjectCard({ project }) {
       <div className="flex items-center gap-4 text-sm">
         <Link
           to={`/projects/${project.slug}`}
-          className="underline underline-offset-4">
+          className="transition underline underline-offset-4 hover:scale-105">
           Case study
         </Link>
         {project.links?.demo && (
@@ -46,7 +48,7 @@ export default function ProjectCard({ project }) {
             href={project.links.demo}
             target="_blank"
             rel="noreferrer"
-            className="underline underline-offset-4">
+            className="transition underline underline-offset-4 hover:scale-105">
             Demo
           </a>
         )}
@@ -55,7 +57,7 @@ export default function ProjectCard({ project }) {
             href={project.links.repo}
             target="_blank"
             rel="noreferrer"
-            className="underline underline-offset-4">
+            className="transition underline underline-offset-4 hover:scale-105">
             Repo
           </a>
         )}
