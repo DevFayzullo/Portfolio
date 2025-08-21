@@ -1,49 +1,115 @@
-[ 
+[
   {
-    "name": "chat-with-ai",
-    "description": "A clean and responsive React-based AI chat interface.",
-    "link": "https://github.com/DevFayzullo/chat-with-ai"
+    "id": "rest-countries",
+    "title": "Rest Countries Explorer",
+    "slug": "rest-countries-explorer",
+    "short": "Single‑page app to browse and filter countries with an a11y‑friendly UI and theme toggle.",
+    "stack": ["React", "Vite", "Tailwind"],
+    "role": "Frontend",
+    "year": 2025,
+    "links": {
+      "repo": "https://github.com/DevFayzullo/rest-countries-explorer"
+    },
+    "highlights": ["Dark/Light mode", "Search & Filter", "Accessible navigation"],
+    "category": "Web App",
+    "featured": true,
+    "visibility": "public",
+    "order": 1,
+    "cover": "/projects/rest-countries/cover.webp"
   },
   {
-    "name": "CHATBOT-UI",
-    "description": "Static AI ChatBot interface (with predefined responses)",
-    "link": "https://github.com/DevFayzullo/chatbot-ui"
+    "id": "chatbot-ui",
+    "title": "Static ChatBot UI",
+    "slug": "chatbot-ui",
+    "short": "Modern, responsive chat interface with predefined flows, keyboard navigation, and subtle animations.",
+    "stack": ["React", "Vite", "Tailwind", "Framer Motion"],
+    "role": "Frontend",
+    "year": 2025,
+    "links": {
+      "demo": "https://YOUR-DEMO/chatbot-ui",
+      "repo": "https://github.com/DevFayzullo/chatbot-ui"
+    },
+    "highlights": ["Typing indicator", "A11y keyboard nav", "Mobile‑first layout"],
+    "category": "UI/UX",
+    "featured": true,
+    "visibility": "public",
+    "order": 2,
+    "cover": "/projects/chatbot-ui/cover.webp"
   },
   {
-    "name": "Rest Countries Explorer",
-    "description": "Explore and filter countries with real-time data from the REST Countries API. A lightweight, responsive app built using Webpack and Babel.",
-    "link": "https://github.com/DevFayzullo/rest-countries-explorer"
+    "id": "digital-closet",
+    "title": "Digital Closet",
+    "slug": "digital-closet",
+    "short": "Digital wardrobe manager to organize clothes, tag items, and compose outfits.",
+    "stack": ["React", "Vite", "Tailwind"],
+    "role": "Frontend",
+    "year": 2025,
+    "links": {
+      "demo": "https://YOUR-DEMO/digital-closet",
+      "repo": "https://github.com/DevFayzullo/Digital-closet"
+    },
+    "highlights": ["Tag & filter", "Image handling", "Saved outfits"],
+    "category": "Web App",
+    "featured": false,
+    "visibility": "public",
+    "order": 3,
+    "cover": "/projects/digital-closet/cover.webp"
   },
   {
-    "name": "E-Commerce_Project",
-    "description": "Fully responsive E-Commerce Website built using HTML, CSS, and Vanilla JavaScript",
-    "link": "https://github.com/DevFayzullo/E-Commerce-Project"
+    "id": "ecommerce",
+    "title": "Mini Store (Cart & Checkout)",
+    "slug": "mini-store",
+    "short": "E‑commerce flow with product list, cart, checkout, and form validation.",
+    "stack": ["HTML", "CSS", "JavaScript"],
+    "role": "Frontend",
+    "year": 2024,
+    "links": {
+      "demo": "https://YOUR-DEMO/mini-store",
+      "repo": "https://github.com/DevFayzullo/E-Commerce-Project"
+    },
+    "highlights": ["Cart state", "Checkout form", "Responsive UI"],
+    "category": "Web App",
+    "featured": false,
+    "visibility": "public",
+    "order": 4,
+    "cover": "/projects/mini-store/cover.webp"
   },
   {
-    "name": "JS-Projects",
-    "description": "A collection of small JavaScript apps demonstrating DOM manipulation and browser-based interactivity",
-    "link": "https://github.com/DevFayzullo/JS-Projects"
+    "id": "healthypentagon",
+    "title": "HealthyPentagon",
+    "slug": "healthy-pentagon",
+    "short": "Healthy diet & product review platform (JSP + MySQL + Tomcat).",
+    "stack": ["JSP", "MySQL", "Tomcat"],
+    "role": "Fullstack",
+    "year": 2024,
+    "links": {
+      "demo": "https://YOUR-DEMO/healthy-pentagon",
+      "repo": "https://github.com/DevFayzullo/HealthyPentagon"
+    },
+    "highlights": ["Auth & CRUD", "Relational schema", "Server‑rendered views"],
+    "category": "Fullstack",
+    "featured": false,
+    "visibility": "public",
+    "order": 5,
+    "cover": "/projects/healthy-pentagon/cover.webp"
   },
   {
-    "name": "dorm-project",
-    "description": "Online Dormitory Check-in/Check-out Management System for University Capstone Design Project",
-    "link": "https://github.com/DevFayzullo/dorm-project"
-  },
-  {
-    "name": "HealthyPentagon",
-    "description": "Healthy diet & product review platform (JSP + MySQL + Tomcat) ",
-    "link": "https://github.com/DevFayzullo/HealthyPentagon"
-  },
-  {
-    "name": "Digital-closet",
-    "description": "Digital wardrobe manager to organize clothes and create outfits",
-    "link": "https://github.com/DevFayzullo/Digital-closet"
-  },
-  {
-    "name": "To-Do App",
-    "description": "A modern, responsive, and fully-functional To-Do List application built with HTML, CSS, and JavaScript",
-    "link": "https://github.com/Fayzullo-s-lab/To-Do-App"
+    "id": "dorm-project",
+    "title": "Dorm Check‑in/Out System",
+    "slug": "dorm-checkin",
+    "short": "University dormitory management (check‑in/out) with admin views.",
+    "stack": ["(Your stack)"],
+    "role": "Fullstack",
+    "year": 2024,
+    "links": {
+      "demo": "https://YOUR-DEMO/dorm",
+      "repo": "https://github.com/DevFayzullo/dorm-project"
+    },
+    "highlights": ["Admin dashboard", "CRUD workflows", "Role‑based flows"],
+    "category": "Fullstack",
+    "featured": false,
+    "visibility": "public",
+    "order": 6,
+    "cover": "/projects/dorm/cover.webp"
   }
 ]
-
-

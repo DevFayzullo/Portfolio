@@ -6,133 +6,210 @@ import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
 function App() {
   const [projects, setProjects] = useState([]);
-  const [javob, setJavob] = useState("");
+  const [msg, setMsg] = useState("");
   const [loading, setLoading] = useState(true);
-  const formRef = useRef();
+  const [fetchErr, setFetchErr] = useState("");
+  const formRef = useRef(null);
+
+  // ⚙️ EmailJS keys from .env (DON'T hardcode these)
+  const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 1500);
-    fetch("/data/projects.json")
-      .then((res) => res.json())
-      .then((data) => setProjects(data));
+    const ac = new AbortController();
+
+    (async () => {
+      try {
+        const res = await fetch("/data/projects.json", { signal: ac.signal });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+
+        // show only visible and sort by order (fallback by title)
+        const visible = (data || [])
+          .filter((p) => (p.visibility ?? "public") === "public")
+          .sort(
+            (a, b) =>
+              (a.order ?? 999) - (b.order ?? 999) ||
+              a.title.localeCompare(b.title)
+          );
+
+        setProjects(visible);
+      } catch (e) {
+        setFetchErr("Failed to load projects. Please refresh.");
+        console.error(e);
+      } finally {
+        setLoading(false);
+      }
+    })();
+
+    return () => ac.abort();
   }, []);
 
-  const yubor = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_p1uyau5",
-        "Gmail",
+    const fd = new FormData(formRef.current);
+
+    // 🐝 Honeypot (bots fill hidden "company")
+    if ((fd.get("company") || "").toString().trim().length) return;
+
+    // ⏱️ Time-to-submit (simple bot guard)
+    const startedAt = Number(fd.get("startedAt") || 0);
+    if (Date.now() - startedAt < 2000) return;
+
+    try {
+      await emailjs.sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
         formRef.current,
-        "L6Q9QKegGJNWV43K7"
-      )
-      .then(() => {
-        setJavob("✅ Your message has been sent!");
-        e.target.reset();
-      })
-      .catch(() => {
-        setJavob("❌ Failed to send your message.");
-      });
+        EMAILJS_PUBLIC_KEY
+      );
+      setMsg("✅ Your message has been sent!");
+      e.target.reset();
+    } catch {
+      setMsg("❌ Failed to send your message.");
+    }
   };
 
   if (loading) return <Loading />;
 
   return (
     <div className="bg-gray-900 text-white min-h-screen font-sans">
+      {/* Skip link for keyboard users */}
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-black/70 px-3 py-2 rounded">
+        Skip to content
+      </a>
+
       <div className="max-w-5xl mx-auto p-6">
-        <nav className="flex flex-wrap justify-between items-center gap-4 sticky top-0 bg-gray-900 shadow px-4 py-3 z-50">
+        <nav className="flex flex-wrap justify-between items-center gap-4 sticky top-0 bg-gray-900/95 backdrop-blur shadow px-4 py-3 z-50">
           <a
             href="#portfolio"
             className="text-blue-400 font-semibold hover:text-blue-300 transition">
             Portfolio
           </a>
-          <a
-            href="#about"
-            className="text-blue-400 font-semibold hover:text-blue-300 transition">
-            About
-          </a>
-          <a
-            href="#contact"
-            className="text-blue-400 font-semibold hover:text-blue-300 transition">
-            Contact
-          </a>
+          <div className="flex gap-6">
+            <a
+              href="#about"
+              className="text-blue-400 font-semibold hover:text-blue-300 transition">
+              About
+            </a>
+            <a
+              href="#contact"
+              className="text-blue-400 font-semibold hover:text-blue-300 transition">
+              Contact
+            </a>
+          </div>
         </nav>
 
-        <h1
-          id="portfolio"
-          className="text-3xl font-bold text-center mt-10 mb-6">
-          📂 My Portfolio
-        </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {projects.map((proj, i) => (
-            <ProjectCard key={i} {...proj} />
-          ))}
-        </div>
+        <main id="main">
+          <h1
+            id="portfolio"
+            className="text-3xl font-bold text-center mt-10 mb-6">
+            📂 My Portfolio
+          </h1>
 
-        <section id="about" className="mt-16">
-          <h2 className="text-2xl font-semibold mb-4 text-center">
-            👤 About Me
+          {fetchErr ? (
+            <p className="text-center text-red-400">{fetchErr}</p>
+          ) : projects.length === 0 ? (
+            <p className="text-center text-gray-300">No projects yet.</p>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {projects.map((proj) => (
+                <ProjectCard key={proj.id ?? proj.slug} {...proj} />
+              ))}
+            </div>
+          )}
+
+          <section id="about" className="mt-16">
+            <h2 className="text-2xl font-semibold mb-4 text-center">
+              👤 About Me
+            </h2>
+            <p className="text-center max-w-2xl mx-auto text-gray-200">
+              I am a passionate software engineer focused on frontend
+              development. I enjoy building interactive UIs with React and
+              Tailwind CSS, aiming for clean, responsive design and real-world
+              impact.
+            </p>
+          </section>
+
+          <h2
+            id="contact"
+            className="text-2xl font-semibold mt-16 mb-4 text-center">
+            📬 Contact Me
           </h2>
-          <p className="text-center max-w-2xl mx-auto">
-            I am a passionate software engineer with a strong interest in
-            frontend development. I enjoy building interactive user interfaces
-            using React and Tailwind CSS. I strive for clean, responsive design
-            and love solving real-world problems through code.
-          </p>
-        </section>
+          <form
+            ref={formRef}
+            onSubmit={handleSubmit}
+            className="space-y-4 max-w-xl mx-auto">
+            {/* Bot guards */}
+            <input type="hidden" name="startedAt" value={Date.now()} />
+            <div className="sr-only" aria-hidden="true">
+              <label htmlFor="company">Company</label>
+              <input
+                id="company"
+                name="company"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
 
-        <h2
-          id="contact"
-          className="text-2xl font-semibold mt-16 mb-4 text-center">
-          📬 Contact Me
-        </h2>
-        <form
-          ref={formRef}
-          onSubmit={yubor}
-          className="space-y-4 max-w-xl mx-auto">
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required
-            className="w-full p-3 border rounded bg-gray-800 text-white border-gray-600"
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            required
-            className="w-full p-3 border rounded bg-gray-800 text-white border-gray-600"
-          />
-          <textarea
-            name="message"
-            placeholder="Your Message..."
-            required
-            className="w-full p-3 border rounded bg-gray-800 text-white border-gray-600"></textarea>
-          <button
-            type="submit"
-            className="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 hover:scale-105 transition">
-            Send Message
-          </button>
-        </form>
-        <p className="mt-4 text-center">{javob}</p>
+            <label className="block">
+              <span className="text-sm">Your Name</span>
+              <input
+                type="text"
+                name="name"
+                required
+                className="w-full p-3 border rounded bg-gray-800 text-white border-gray-600"
+              />
+            </label>
 
-        <div className="mt-16 text-center space-x-4">
-          <a
-            href="https://t.me/devFayzullo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline text-blue-400 hover:text-blue-300 transition">
-            Telegram Blog
-          </a>
-          <a
-            href="https://blog.naver.com/devfayzullo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline text-blue-400 hover:text-blue-300 transition">
-            Naver Blog
-          </a>
-        </div>
+            <label className="block">
+              <span className="text-sm">Your Email</span>
+              <input
+                type="email"
+                name="email"
+                required
+                className="w-full p-3 border rounded bg-gray-800 text-white border-gray-600"
+              />
+            </label>
+
+            <label className="block">
+              <span className="text-sm">Your Message</span>
+              <textarea
+                name="message"
+                rows={5}
+                required
+                className="w-full p-3 border rounded bg-gray-800 text-white border-gray-600"
+              />
+            </label>
+
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 hover:scale-105 transition">
+              Send Message
+            </button>
+          </form>
+          <p className="mt-4 text-center">{msg}</p>
+
+          <div className="mt-16 text-center space-x-4">
+            <a
+              href="https://t.me/devFayzullo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-blue-400 hover:text-blue-300 transition">
+              Telegram Blog
+            </a>
+            <a
+              href="https://blog.naver.com/devfayzullo"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline text-blue-400 hover:text-blue-300 transition">
+              Naver Blog
+            </a>
+          </div>
+        </main>
 
         <footer className="mt-16 border-t border-gray-700 pt-6 text-center">
           <p className="mb-4">Connect with me:</p>
@@ -141,28 +218,32 @@ function App() {
               href="https://github.com/DevFayzullo"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-400 transition">
+              className="hover:text-blue-400 transition"
+              aria-label="GitHub">
               <FaGithub />
             </a>
             <a
               href="https://linkedin.com/in/abduganiev-fayzullo"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-400 transition">
+              className="hover:text-blue-400 transition"
+              aria-label="LinkedIn">
               <FaLinkedin />
             </a>
             <a
               href="https://twitter.com/FayzulloDev"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-400 transition">
+              className="hover:text-blue-400 transition"
+              aria-label="Twitter">
               <FaTwitter />
             </a>
             <a
               href="https://instagram.com/abduganiyevfayzullo"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-blue-400 transition">
+              className="hover:text-blue-400 transition"
+              aria-label="Instagram">
               <FaInstagram />
             </a>
           </div>
