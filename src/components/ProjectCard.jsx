@@ -1,67 +1,48 @@
-import { Link } from "react-router-dom";
-
-export default function ProjectCard({ project }) {
+export default function ProjectCard({
+  image,
+  title,
+  description,
+  tags = [],
+  github,
+  demo,
+}) {
   return (
-    <article className="group rounded-2xl border border-neutral-800 bg-neutral-900/50 p-4 shadow transition transform hover:scale-[1.02] hover:bg-neutral-800">
-      <header className="mb-3">
-        <h3 className="text-lg font-semibold">
-          <Link
-            to={`/projects/${project.slug}`}
-            className="transition underline-offset-4 group-hover:text-blue-400 group-hover:underline">
-            {project.title}
-          </Link>
-        </h3>
-      </header>
-
-      {project.cover && (
+    <div
+      className="rounded-2xl border border-gray-200 dark:border-gray-800 p-5
+                    transition-transform duration-300 transform-gpu hover:scale-[1.03] hover:shadow-lg
+                    hover:border-gray-300 dark:hover:border-gray-700">
+      {image && (
         <img
-          src={project.cover}
-          alt={`${project.title} cover`}
-          loading="lazy"
-          decoding="async"
-          width="800"
-          height="450"
-          className="mb-3 aspect-video w-full rounded-lg object-cover transition group-hover:opacity-90"
+          src={image}
+          alt={title}
+          className="rounded-lg mb-4 aspect-video object-cover"
         />
       )}
-
-      <p className="mb-3 text-sm text-neutral-300">{project.short}</p>
-
-      <ul className="mb-4 flex flex-wrap gap-2" aria-label="Technology stack">
-        {project.stack?.map((s) => (
-          <li
-            key={s}
-            className="rounded-lg border px-2 py-1 text-xs transition group-hover:border-blue-400 group-hover:text-blue-300">
-            {s}
-          </li>
-        ))}
-      </ul>
-
-      <div className="flex items-center gap-4 text-sm">
-        <Link
-          to={`/projects/${project.slug}`}
-          className="transition underline underline-offset-4 hover:scale-105">
-          Case study
-        </Link>
-        {project.links?.demo && (
-          <a
-            href={project.links.demo}
-            target="_blank"
-            rel="noreferrer"
-            className="transition underline underline-offset-4 hover:scale-105">
-            Demo
+      <h3 className="font-semibold text-lg">{title}</h3>
+      <p className="text-gray-600 dark:text-gray-300 mt-2">{description}</p>
+      {tags?.length > 0 && (
+        <div className="mt-3 flex flex-wrap gap-2">
+          {tags.map((t) => (
+            <span
+              key={t}
+              className="text-xs rounded-lg border border-gray-200 dark:border-gray-700 px-2 py-1">
+              {t}
+            </span>
+          ))}
+        </div>
+      )}
+      <div className="flex gap-4 mt-4">
+        {github && (
+          <a className="text-blue-600 hover:underline" href={github}>
+            GitHub
           </a>
         )}
-        {project.links?.repo && (
-          <a
-            href={project.links.repo}
-            target="_blank"
-            rel="noreferrer"
-            className="transition underline underline-offset-4 hover:scale-105">
-            Repo
+        {demo && (
+          <a className="text-blue-600 hover:underline" href={demo}>
+            Live Demo
           </a>
         )}
       </div>
-    </article>
+    </div>
   );
 }
