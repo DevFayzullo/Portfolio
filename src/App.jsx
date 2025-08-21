@@ -9,23 +9,27 @@ function App() {
   const [msg, setMsg] = useState("");
   const [loading, setLoading] = useState(true);
   const [fetchErr, setFetchErr] = useState("");
+  const [emailReady, setEmailReady] = useState(true); // ENV keys check
   const formRef = useRef(null);
 
-  // ⚙️ EmailJS keys from .env (DON'T hardcode these)
+  // ✅ EmailJS keys — .env dan
   const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
   const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
   const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
   useEffect(() => {
-    const ac = new AbortController();
+    // ENV mavjudligini tekshir
+    if (!EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !EMAILJS_PUBLIC_KEY) {
+      console.warn("EmailJS ENV variables are missing. Check your .env file.");
+      setEmailReady(false);
+    }
 
+    const ac = new AbortController();
     (async () => {
       try {
         const res = await fetch("/data/projects.json", { signal: ac.signal });
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         const data = await res.json();
-
-        // show only visible and sort by order (fallback by title)
         const visible = (data || [])
           .filter((p) => (p.visibility ?? "public") === "public")
           .sort(
@@ -33,27 +37,30 @@ function App() {
               (a.order ?? 999) - (b.order ?? 999) ||
               a.title.localeCompare(b.title)
           );
-
         setProjects(visible);
       } catch (e) {
-        setFetchErr("Failed to load projects. Please refresh.");
         console.error(e);
+        setFetchErr("Failed to load projects. Please refresh.");
       } finally {
         setLoading(false);
       }
     })();
-
     return () => ac.abort();
   }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!emailReady) {
+      setMsg("❌ Email is not configured. Please try again later.");
+      return;
+    }
+
     const fd = new FormData(formRef.current);
 
-    // 🐝 Honeypot (bots fill hidden "company")
+    // 🐝 Honeypot
     if ((fd.get("company") || "").toString().trim().length) return;
 
-    // ⏱️ Time-to-submit (simple bot guard)
+    // ⏱️ Time to submit
     const startedAt = Number(fd.get("startedAt") || 0);
     if (Date.now() - startedAt < 2000) return;
 
@@ -66,7 +73,8 @@ function App() {
       );
       setMsg("✅ Your message has been sent!");
       e.target.reset();
-    } catch {
+    } catch (err) {
+      console.error(err);
       setMsg("❌ Failed to send your message.");
     }
   };
@@ -75,13 +83,11 @@ function App() {
 
   return (
     <div className="bg-gray-900 text-white min-h-screen font-sans">
-      {/* Skip link for keyboard users */}
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 bg-black/70 px-3 py-2 rounded">
         Skip to content
       </a>
-
       <div className="max-w-5xl mx-auto p-6">
         <nav className="flex flex-wrap justify-between items-center gap-4 sticky top-0 bg-gray-900/95 backdrop-blur shadow px-4 py-3 z-50">
           <a
@@ -139,11 +145,12 @@ function App() {
             className="text-2xl font-semibold mt-16 mb-4 text-center">
             📬 Contact Me
           </h2>
+          {/* Contact form */}
           <form
             ref={formRef}
             onSubmit={handleSubmit}
             className="space-y-4 max-w-xl mx-auto">
-            {/* Bot guards */}
+            {/* hidden anti-bot fields */}
             <input type="hidden" name="startedAt" value={Date.now()} />
             <div className="sr-only" aria-hidden="true">
               <label htmlFor="company">Company</label>
@@ -187,7 +194,9 @@ function App() {
 
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 hover:scale-105 transition">
+              disabled={!emailReady}
+              title={!emailReady ? "Email is not configured" : undefined}
+              className="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 hover:scale-105 transition disabled:opacity-60 disabled:hover:scale-100">
               Send Message
             </button>
           </form>

@@ -73,6 +73,14 @@ npm run dev
 
 ---
 
+## Rename to .env and fill your real keys
+
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+
+---
+
 ## 📮 Contact
 
 For any questions, feel free to contact me via:

@@ -8,6 +8,7 @@
     "role": "Frontend",
     "year": 2025,
     "links": {
+      "demo": "https://devfayzullo.github.io/rest-countries-explorer/",
       "repo": "https://github.com/DevFayzullo/rest-countries-explorer"
     },
     "highlights": ["Dark/Light mode", "Search & Filter", "Accessible navigation"],
@@ -26,7 +27,6 @@
     "role": "Frontend",
     "year": 2025,
     "links": {
-      "demo": "https://YOUR-DEMO/chatbot-ui",
       "repo": "https://github.com/DevFayzullo/chatbot-ui"
     },
     "highlights": ["Typing indicator", "A11y keyboard nav", "Mobile‑first layout"],
@@ -45,7 +45,6 @@
     "role": "Frontend",
     "year": 2025,
     "links": {
-      "demo": "https://YOUR-DEMO/digital-closet",
       "repo": "https://github.com/DevFayzullo/Digital-closet"
     },
     "highlights": ["Tag & filter", "Image handling", "Saved outfits"],
@@ -64,7 +63,6 @@
     "role": "Frontend",
     "year": 2024,
     "links": {
-      "demo": "https://YOUR-DEMO/mini-store",
       "repo": "https://github.com/DevFayzullo/E-Commerce-Project"
     },
     "highlights": ["Cart state", "Checkout form", "Responsive UI"],
@@ -83,7 +81,6 @@
     "role": "Fullstack",
     "year": 2024,
     "links": {
-      "demo": "https://YOUR-DEMO/healthy-pentagon",
       "repo": "https://github.com/DevFayzullo/HealthyPentagon"
     },
     "highlights": ["Auth & CRUD", "Relational schema", "Server‑rendered views"],
@@ -102,7 +99,7 @@
     "role": "Fullstack",
     "year": 2024,
     "links": {
-      "demo": "https://YOUR-DEMO/dorm",
+      "demo": "https://kbu-dorm.kr",
       "repo": "https://github.com/DevFayzullo/dorm-project"
     },
     "highlights": ["Admin dashboard", "CRUD workflows", "Role‑based flows"],
