@@ -1,16 +1,103 @@
+import {
+  Mail,
+  Github,
+  Linkedin,
+  Instagram,
+  Twitter,
+  FileDown,
+} from "lucide-react";
+
+const socials = [
+  {
+    name: "Email",
+    href: "mailto:your.email@example.com",
+    icon: Mail,
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/DevFayzullo",
+    icon: Github,
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/your-profile",
+    icon: Linkedin,
+  },
+  {
+    name: "Instagram",
+    href: "https://instagram.com/your_handle",
+    icon: Instagram,
+  },
+  {
+    name: "X",
+    href: "https://x.com/your_handle",
+    icon: Twitter,
+  },
+];
+
+const resumes = [
+  {
+    name: "Resume (EN)",
+    href: "/resume/resume.pdf",
+  },
+  {
+    name: "Resume (KR)",
+    href: "/resume/resume-kr.pdf",
+  },
+];
+
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-gray-200 dark:border-gray-800">
-      <div className="max-w-6xl mx-auto px-4 md:px-6 py-10 text-sm flex flex-col sm:flex-row items-center justify-between gap-3">
+    <footer className="mt-24">
+      <hr className="border-gray-200 dark:border-gray-700" />
+      {/* Social icons */}
+      <div className="max-w-6xl mx-auto px-4 md:px-6 py-8 flex justify-center">
+        <ul className="flex items-center gap-5">
+          {socials.map((s) => (
+            <li key={s.name}>
+              <a
+                href={s.href}
+                target={s.href.startsWith("http") ? "_blank" : undefined}
+                rel={
+                  s.href.startsWith("http") ? "noopener noreferrer" : undefined
+                }
+                aria-label={s.name}
+                className="group inline-flex items-center justify-center h-11 w-11 rounded-xl
+                           text-gray-600 dark:text-gray-300
+                           hover:text-blue-600 dark:hover:text-blue-400
+                           hover:-translate-y-0.5 hover:scale-110
+                           transition transform-gpu
+                           hover:bg-gray-100 dark:hover:bg-gray-800">
+                <s.icon className="h-5 w-5" />
+                <span className="sr-only">{s.name}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Resume download */}
+      <hr className="border-gray-200 dark:border-gray-700" />
+      <div className="flex justify-center gap-6 mt-4">
+        {resumes.map((r) => (
+          <a
+            key={r.name}
+            href={r.href}
+            download
+            className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium
+                       text-gray-700 dark:text-gray-300
+                       hover:text-blue-600 dark:hover:text-blue-400
+                       hover:bg-gray-100 dark:hover:bg-gray-800
+                       transition">
+            <FileDown className="h-4 w-4" />
+            {r.name}
+          </a>
+        ))}
+      </div>
+
+      {/* Copyright */}
+      <div className="py-6 text-sm flex items-center justify-center">
         <p>© {new Date().getFullYear()} DevFayzullo. All rights reserved.</p>
-        <div className="flex gap-4">
-          <a href="https://github.com/DevFayzullo" className="hover:underline">
-            GitHub
-          </a>
-          <a href="/resume/resume.pdf" className="hover:underline">
-            Resume
-          </a>
-        </div>
       </div>
     </footer>
   );
