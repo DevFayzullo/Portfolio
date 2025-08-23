@@ -1,6 +1,9 @@
+// src/sections/ContactSection.jsx
+import { Link } from "react-router-dom";
 import SectionTitle from "../components/SectionTitle.jsx";
+import { Send, Newspaper, ExternalLink } from "lucide-react";
 
-export default function ContactSection({ variant = "full" }) {
+export default function ContactSection() {
   return (
     <section id="contact" className="mt-24 px-6 text-center">
       <SectionTitle
@@ -9,57 +12,44 @@ export default function ContactSection({ variant = "full" }) {
         subtitle="Let’s work together!"
       />
 
-      {variant === "full" ? (
-        <div className="mt-8">
-          <form
-            className="mx-auto max-w-lg flex flex-col gap-4"
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert("Message sent! (Integrate EmailJS here)");
-            }}>
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="rounded-xl border px-4 py-2 dark:border-gray-700 dark:bg-gray-900"
-              required
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="rounded-xl border px-4 py-2 dark:border-gray-700 dark:bg-gray-900"
-              required
-            />
-            <textarea
-              placeholder="Your Message"
-              className="rounded-xl border px-4 py-2 h-32 dark:border-gray-700 dark:bg-gray-900"
-              required
-            />
-            <button
-              type="submit"
-              className="mt-2 rounded-xl bg-blue-600 px-5 py-2.5 font-semibold text-white hover:bg-blue-700 transition">
-              Send Message
-            </button>
-          </form>
-        </div>
-      ) : (
-        <div className="mt-6 flex justify-center gap-6">
-          <a
-            href="mailto:youremail@example.com"
-            className="text-blue-600 hover:underline">
-            Email
-          </a>
-          <a
-            href="https://github.com/DevFayzullo"
-            className="text-blue-600 hover:underline">
-            GitHub
-          </a>
-          <a
-            href="https://linkedin.com/in/yourprofile"
-            className="text-blue-600 hover:underline">
-            LinkedIn
-          </a>
-        </div>
-      )}
+      {/* Go to Contact page (Navbar route) */}
+      <div className="mt-6">
+        <Link
+          to="/contact"
+          className="inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold
+                     bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+          aria-label="Open Contact page">
+          <Send className="h-4 w-4" />
+          Open Contact Page
+        </Link>
+      </div>
+
+      {/* Blogs */}
+      <div className="mt-5 flex items-center justify-center gap-4">
+        <a
+          href="https://t.me/your_telegram_blog" // TODO: o‘zingizning linkingiz
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium
+                     border border-gray-300 dark:border-gray-700
+                     hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+          <Send className="h-4 w-4" />
+          Telegram Blog
+          <ExternalLink className="h-4 w-4 opacity-70" />
+        </a>
+
+        <a
+          href="https://blog.naver.com/your_naver_id" // TODO: o‘zingizning linkingiz
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium
+                     border border-gray-300 dark:border-gray-700
+                     hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+          <Newspaper className="h-4 w-4" />
+          Naver Blog
+          <ExternalLink className="h-4 w-4 opacity-70" />
+        </a>
+      </div>
     </section>
   );
 }
