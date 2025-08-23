@@ -41,7 +41,6 @@ export default function Contact() {
         ref={formRef}
         onSubmit={onSubmit}
         className="mx-auto mt-8 max-w-xl space-y-4 rounded-2xl border border-gray-200 dark:border-gray-800 p-6">
-        {/* Honeypot (spamdan himoya) */}
         <input
           type="text"
           name="_gotcha"
@@ -95,7 +94,6 @@ export default function Contact() {
           {status === "loading" ? "Sending…" : "Send Message"}
         </button>
 
-        {/* Status Messages */}
         {status === "success" && (
           <p className="text-green-600 dark:text-green-400 text-sm">
             Thanks! Your message was sent successfully.

@@ -1,4 +1,3 @@
-// src/sections/AboutSection.jsx
 import { Link } from "react-router-dom";
 
 export default function AboutSection() {
@@ -15,7 +14,6 @@ export default function AboutSection() {
         scalable, production-ready applications.
       </p>
 
-      {/* CTAs */}
       <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
         <Link
           to="/about"

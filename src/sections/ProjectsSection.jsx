@@ -1,4 +1,3 @@
-// src/sections/ProjectsSection.jsx
 import { Link } from "react-router-dom";
 import SectionTitle from "../components/SectionTitle.jsx";
 import projectsData from "../data/projects.json";
@@ -23,7 +22,6 @@ export default function ProjectsSection({ variant = "full" }) {
           subtitle={isCompact ? "Some highlights from my work" : ""}
         />
 
-        {/* Grid */}
         <div
           className={`mt-10 grid gap-8 ${
             isCompact ? "md:grid-cols-2" : "md:grid-cols-3"

@@ -1,4 +1,3 @@
-// src/pages/ProjectDetail.jsx
 import { useMemo } from "react";
 import { Link, useParams } from "react-router-dom";
 import projectsData from "../data/projects.json";
@@ -49,7 +48,6 @@ export default function ProjectDetail() {
 
   return (
     <article className="mt-16 px-6 max-w-5xl mx-auto">
-      {/* Breadcrumb */}
       <nav className="text-sm text-gray-600 dark:text-gray-400">
         <Link to="/" className="hover:underline">
           Home
@@ -64,12 +62,10 @@ export default function ProjectDetail() {
         </span>
       </nav>
 
-      {/* Header */}
       <header className="mt-4">
         <h1 className="text-3xl font-bold">{project.title}</h1>
         <p className="mt-2 text-gray-600 dark:text-gray-300">{project.short}</p>
 
-        {/* Meta chips */}
         <div className="mt-4 flex flex-wrap gap-2">
           {project.year && (
             <span className="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-800">
@@ -96,7 +92,6 @@ export default function ProjectDetail() {
         </div>
       </header>
 
-      {/* Cover */}
       {project.cover && (
         <div className="mt-6 overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800">
           <img
@@ -108,7 +103,6 @@ export default function ProjectDetail() {
         </div>
       )}
 
-      {/* Highlights */}
       {project.highlights?.length > 0 && (
         <section className="mt-8">
           <h2 className="text-xl font-semibold">Highlights</h2>
@@ -120,7 +114,6 @@ export default function ProjectDetail() {
         </section>
       )}
 
-      {/* Links */}
       {(project.links?.demo || project.links?.repo) && (
         <section className="mt-8">
           <div className="flex flex-wrap gap-3">
@@ -146,7 +139,6 @@ export default function ProjectDetail() {
         </section>
       )}
 
-      {/* Related projects */}
       {related.length > 0 && (
         <section className="mt-12">
           <h3 className="text-lg font-semibold">Related Projects</h3>
@@ -177,7 +169,6 @@ export default function ProjectDetail() {
         </section>
       )}
 
-      {/* Back CTA */}
       <div className="mt-10">
         <Link
           to="/projects"

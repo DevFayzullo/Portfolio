@@ -1,16 +1,13 @@
-// src/pages/About.jsx
 import { Link } from "react-router-dom";
 
 export default function About() {
   return (
     <section id="about" className="mt-24 px-6">
       <div className="max-w-5xl mx-auto">
-        {/* Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-center">
           👤 I’m a Frontend Developer | Software Engineer
         </h2>
 
-        {/* Career Objective */}
         <p className="mt-4 text-center max-w-3xl mx-auto text-gray-700 dark:text-gray-300 leading-relaxed">
           Motivated and detail-oriented Frontend Developer with a strong
           foundation in <strong>React.js</strong>, <strong>Tailwind CSS</strong>
@@ -22,9 +19,7 @@ export default function About() {
           collaborative team.
         </p>
 
-        {/* Education & Skills */}
         <div className="mt-10 grid gap-6 md:grid-cols-2">
-          {/* Technical Skills */}
           <div
             className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950
                        transition-transform transform-gpu duration-300
@@ -50,7 +45,6 @@ export default function About() {
             </ul>
           </div>
 
-          {/* Education */}
           <div
             className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950
                        transition-transform transform-gpu duration-300
@@ -83,7 +77,6 @@ export default function About() {
           </div>
         </div>
 
-        {/* Focus / What I'm learning */}
         <div
           className="mt-10 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950
                      transition-transform transform-gpu duration-300
@@ -108,7 +101,6 @@ export default function About() {
           </ul>
         </div>
 
-        {/* CTAs */}
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <Link
             to="/projects"

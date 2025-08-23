@@ -1,4 +1,3 @@
-// src/sections/ContactSection.jsx
 import { Link } from "react-router-dom";
 import SectionTitle from "../components/SectionTitle.jsx";
 import { Send, Newspaper, ExternalLink } from "lucide-react";
@@ -12,7 +11,6 @@ export default function ContactSection() {
         subtitle="Let’s work together!"
       />
 
-      {/* Go to Contact page (Navbar route) */}
       <div className="mt-6">
         <Link
           to="/contact"
@@ -24,10 +22,9 @@ export default function ContactSection() {
         </Link>
       </div>
 
-      {/* Blogs */}
       <div className="mt-5 flex items-center justify-center gap-4">
         <a
-          href="https://t.me/your_telegram_blog" // TODO: o‘zingizning linkingiz
+          href="https://t.me/devFayzullo"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium
@@ -39,7 +36,7 @@ export default function ContactSection() {
         </a>
 
         <a
-          href="https://blog.naver.com/your_naver_id" // TODO: o‘zingizning linkingiz
+          href="https://blog.naver.com/devfayzullo"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-xl px-4 py-2 text-sm font-medium

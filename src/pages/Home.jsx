@@ -6,7 +6,6 @@ import SkillsSection from "../sections/SkillsSection.jsx";
 export default function Home() {
   return (
     <>
-      {/* Hero */}
       <section
         id="hero"
         className="min-h-screen flex flex-col justify-center items-center text-center px-6">
@@ -14,7 +13,7 @@ export default function Home() {
           Hi, I’m <span className="text-blue-600">DevFayzullo</span>
         </h1>
         <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
-          Frontend Developer | React & Tailwind Enthusiast
+          Frontend Developer | Software Engineer
         </p>
         <div className="mt-6 flex gap-4">
           <a

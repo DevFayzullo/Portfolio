@@ -10,7 +10,7 @@ import {
 const socials = [
   {
     name: "Email",
-    href: "mailto:your.email@example.com",
+    href: "mailto:fayzullo.coder@gmail.com",
     icon: Mail,
   },
   {
@@ -20,17 +20,17 @@ const socials = [
   },
   {
     name: "LinkedIn",
-    href: "https://www.linkedin.com/in/your-profile",
+    href: "https://www.linkedin.com/in/abduganiev-fayzullo",
     icon: Linkedin,
   },
   {
     name: "Instagram",
-    href: "https://instagram.com/your_handle",
+    href: "https://instagram.com/abduganiyevfayzullo",
     icon: Instagram,
   },
   {
     name: "X",
-    href: "https://x.com/your_handle",
+    href: "https://x.com/FayzulloDev",
     icon: Twitter,
   },
 ];
@@ -95,7 +95,6 @@ export default function Footer() {
         ))}
       </div>
 
-      {/* Copyright */}
       <div className="py-6 text-sm flex items-center justify-center">
         <p>© {new Date().getFullYear()} DevFayzullo. All rights reserved.</p>
       </div>
