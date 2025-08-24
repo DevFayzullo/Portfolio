@@ -96,8 +96,8 @@ VITE_EMAILJS_PUBLIC_KEY=your_public_key
 
 ## 📮 Contact
 
-- Telegram: [@DevFayzullo](https://t.me/devFayzullo)
-- Naver Blog: [Fayzullo’s Life](https://blog.naver.com/devfayzullo)
+- Telegram: [Fayzulo's Life](https://t.me/devFayzullo)
+- Naver Blog: [@DevFayzullo](https://blog.naver.com/devfayzullo)
 
 ---
 
