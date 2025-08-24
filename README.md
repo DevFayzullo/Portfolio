@@ -1,4 +1,4 @@
-# 💼 Developer Portfolio
+|# 💼 Developer Portfolio
 
 [🇰🇷 한국어 README](./README.kr.md)
 
