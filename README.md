@@ -9,7 +9,7 @@ Includes dark mode, contact form, blog links, and social media footer.
 
 ## 🌟 Features
 
-- 🎨 Fully Dark-Themed Design (No light mode)
+- 🎨 Light and Dard Theme Design
 - 🖼️ Responsive layout with Tailwind CSS
 - 📂 Portfolio Projects Section (with GitHub links)
 - 👤 About Me Section
