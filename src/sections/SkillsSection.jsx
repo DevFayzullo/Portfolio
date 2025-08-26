@@ -1,31 +1,21 @@
-import SectionTitle from "../components/SectionTitle.jsx";
-
-const skills = [
-  "React",
-  "Tailwind CSS",
-  "Redux Toolkit",
-  "TypeScript (learning)",
-  "Next.js (basic)",
-  "JavaScript (ES6+)",
-  "Git / GitHub",
-  "REST APIs",
-];
+import { useTranslation } from "react-i18next";
+import SectionTitle from "@/components/SectionTitle.jsx";
 
 export default function SkillsSection() {
+  const { t } = useTranslation();
+  const items = t("skills.items", { returnObjects: true });
+
   return (
-    <section id="skills" className="mt-24 px-6 text-center">
-      <SectionTitle
-        emoji="⚡"
-        title="Skills"
-        subtitle="Technologies I work with"
-      />
-      <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-        {skills.map((skill) => (
+    <section className="container py-10 text-center">
+      <h2 className="text-3xl font-bold">⚡ {t("skills.heading")}</h2>
+      <p className="subtle mt-2">{t("skills.sub")}</p>
+
+      <div className="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {items.map((s) => (
           <div
-            key={skill}
-            className="rounded-xl border border-gray-200 dark:border-gray-800 p-6
-                       transform-gpu transition-transform duration-300 hover:scale-105 hover:shadow-lg">
-            <p className="font-semibold">{skill}</p>
+            key={s}
+            className="rounded-2xl border border-white/10 bg-white/5 py-5 px-6 text-center">
+            {s}
           </div>
         ))}
       </div>

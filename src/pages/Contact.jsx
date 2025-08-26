@@ -1,110 +1,74 @@
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
-import { Send } from "lucide-react";
-import SectionTitle from "../components/SectionTitle.jsx";
+import { useTranslation } from "react-i18next";
+import SEO from "@/components/SEO.jsx";
 
 export default function Contact() {
+  const { t } = useTranslation();
   const formRef = useRef(null);
-  const [status, setStatus] = useState("idle"); // idle | loading | success | error
+  const [status, setStatus] = useState("idle");
 
-  const onSubmit = async (e) => {
+  async function onSubmit(e) {
     e.preventDefault();
-    if (!formRef.current) return;
     setStatus("loading");
-
-    try {
-      await emailjs.sendForm(
-        import.meta.env.VITE_EMAILJS_SERVICE_ID,
-        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-        formRef.current,
-        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
-      );
-      setStatus("success");
-      formRef.current.reset();
-    } catch (err) {
-      console.error(err);
-      setStatus("error");
-    }
-  };
+    await new Promise((r) => setTimeout(r, 800)); // demo
+    setStatus("idle");
+    formRef.current?.reset();
+  }
 
   return (
-    <section className="mt-24 px-6">
-      <div className="max-w-3xl mx-auto text-center">
-        <SectionTitle
-          emoji="📬"
-          title="Contact Me"
-          subtitle="Let’s work together!"
-        />
-      </div>
+    <>
+      <SEO page="contact" url="/contact" />
 
-      <form
-        ref={formRef}
-        onSubmit={onSubmit}
-        className="mx-auto mt-8 max-w-xl space-y-4 rounded-2xl border border-gray-200 dark:border-gray-800 p-6">
-        <input
-          type="text"
-          name="_gotcha"
-          className="hidden"
-          tabIndex={-1}
-          autoComplete="off"
-        />
+      <section className="container pt-28 pb-24 text-center">
+        <h1 className="text-3xl font-bold">📬 {t("contact.heading")}</h1>
+        <p className="subtle mt-2">{t("contact.sub")}</p>
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          <div className="text-left">
-            <label className="block text-sm mb-1">Name</label>
-            <input
-              type="text"
-              name="user_name"
-              required
-              placeholder="Your name"
-              className="w-full rounded-xl border px-4 py-2 dark:border-gray-700 dark:bg-gray-900"
-            />
-          </div>
-          <div className="text-left">
-            <label className="block text-sm mb-1">Email</label>
-            <input
-              type="email"
-              name="user_email"
-              required
-              placeholder="you@example.com"
-              className="w-full rounded-xl border px-4 py-2 dark:border-gray-700 dark:bg-gray-900"
-            />
-          </div>
+        <div className="mt-8 form-card text-left max-w-3xl mx-auto">
+          <form
+            ref={formRef}
+            onSubmit={onSubmit}
+            className="grid md:grid-cols-2 gap-4">
+            <div>
+              <label className="text-sm block mb-1">Name</label>
+              <input
+                name="name"
+                className="input"
+                placeholder={t("form.name")}
+                required
+              />
+            </div>
+            <div>
+              <label className="text-sm block mb-1">Email</label>
+              <input
+                type="email"
+                name="email"
+                className="input"
+                placeholder={t("form.email")}
+                required
+              />
+            </div>
+            <div className="md:col-span-2">
+              <label className="text-sm block mb-1">Message</label>
+              <textarea
+                rows="6"
+                name="message"
+                className="input"
+                placeholder={t("form.message")}
+                required
+              />
+            </div>
+            <div className="md:col-span-2">
+              <button
+                disabled={status === "loading"}
+                className="btn btn-primary">
+                {status === "loading"
+                  ? t("contact.sending")
+                  : t("contact.send")}
+              </button>
+            </div>
+          </form>
         </div>
-
-        <div className="text-left">
-          <label className="block text-sm mb-1">Message</label>
-          <textarea
-            name="message"
-            required
-            rows="6"
-            placeholder="Tell me about your project…"
-            className="w-full rounded-xl border px-4 py-2 dark:border-gray-700 dark:bg-gray-900"
-          />
-        </div>
-
-        <button
-          type="submit"
-          disabled={status === "loading"}
-          className="inline-flex items-center gap-2 rounded-xl px-5 py-2.5 font-semibold
-                     bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-60 disabled:cursor-not-allowed
-                     transition-colors"
-          aria-busy={status === "loading"}>
-          <Send className="h-4 w-4" />
-          {status === "loading" ? "Sending…" : "Send Message"}
-        </button>
-
-        {status === "success" && (
-          <p className="text-green-600 dark:text-green-400 text-sm">
-            Thanks! Your message was sent successfully.
-          </p>
-        )}
-        {status === "error" && (
-          <p className="text-red-600 dark:text-red-400 text-sm">
-            Oops, something went wrong. Please try again or email me directly.
-          </p>
-        )}
-      </form>
-    </section>
+      </section>
+    </>
   );
 }

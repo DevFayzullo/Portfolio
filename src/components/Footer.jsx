@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import {
   Mail,
   Github,
@@ -96,7 +97,7 @@ export default function Footer() {
       </div>
 
       <div className="py-6 text-sm flex items-center justify-center">
-        <p>© {new Date().getFullYear()} DevFayzullo. All rights reserved.</p>
+        <p>© {new Date().getFullYear().t("footer.rights")}</p>
       </div>
     </footer>
   );

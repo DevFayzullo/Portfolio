@@ -1,48 +1,70 @@
-export default function ProjectCard({
-  image,
-  title,
-  description,
-  tags = [],
-  github,
-  demo,
-}) {
+import { useTranslation } from "react-i18next";
+
+export default function ProjectCard({ project }) {
+  const { t } = useTranslation();
+  const {
+    title,
+    short,
+    stack = [],
+    year,
+    category,
+    links = {},
+    cover,
+  } = project || {};
+  const live = links.demo;
+  const code = links.repo;
+
   return (
-    <div
-      className="rounded-2xl border border-gray-200 dark:border-gray-800 p-5
-                    transition-transform duration-300 transform-gpu hover:scale-[1.03] hover:shadow-lg
-                    hover:border-gray-300 dark:hover:border-gray-700">
-      {image && (
+    <article className="group card">
+      {/* image */}
+      <div className="img-zoom">
         <img
-          src={image}
+          src={cover}
           alt={title}
-          className="rounded-lg mb-4 aspect-video object-cover"
+          className="w-full aspect-[16/10] object-cover"
+          loading="lazy"
         />
-      )}
-      <h3 className="font-semibold text-lg">{title}</h3>
-      <p className="text-gray-600 dark:text-gray-300 mt-2">{description}</p>
-      {tags?.length > 0 && (
-        <div className="mt-3 flex flex-wrap gap-2">
-          {tags.map((t) => (
-            <span
-              key={t}
-              className="text-xs rounded-lg border border-gray-200 dark:border-gray-700 px-2 py-1">
-              {t}
+      </div>
+
+      {/* overlay footer like screenshot */}
+      <div className="card-footer p-5">
+        {/* chips row */}
+        <div className="flex flex-wrap gap-2 text-gray-300">
+          {year && <span className="chip">{year}</span>}
+          {category && <span className="chip">{category}</span>}
+          {stack.slice(0, 3).map((t2) => (
+            <span key={t2} className="chip">
+              {t2}
             </span>
           ))}
         </div>
-      )}
-      <div className="flex gap-4 mt-4">
-        {github && (
-          <a className="text-blue-600 hover:underline" href={github}>
-            GitHub
-          </a>
-        )}
-        {demo && (
-          <a className="text-blue-600 hover:underline" href={demo}>
-            Live Demo
-          </a>
-        )}
+
+        {/* title & short */}
+        <h3 className="mt-3 text-lg font-semibold">{title}</h3>
+        {short && <p className="mt-2 text-sm text-gray-300">{short}</p>}
+
+        {/* links */}
+        <div className="mt-4 flex items-center gap-4 text-sm">
+          {live && (
+            <a
+              className="text-blue-400 hover:underline"
+              href={live}
+              target="_blank"
+              rel="noreferrer">
+              {t("projects.live")}
+            </a>
+          )}
+          {code && (
+            <a
+              className="text-gray-300 hover:underline"
+              href={code}
+              target="_blank"
+              rel="noreferrer">
+              {t("projects.code")}
+            </a>
+          )}
+        </div>
       </div>
-    </div>
+    </article>
   );
 }
