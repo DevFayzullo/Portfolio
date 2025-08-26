@@ -1,0 +1,66 @@
+{
+  "nav": { "home": "Bosh sahifa", "about": "Haqida", "projects": "Loyihalar", "contact": "Bog‘lanish" },
+
+  "seo": {
+    "siteName": "DevFayzullo",
+    "homeTitle": "DevFayzullo — Frontend Dasturchi",
+    "homeDesc": "Frontend Dasturchi | Dasturiy muhandis",
+    "aboutTitle": "Haqida — DevFayzullo",
+    "aboutDesc": "Men Frontend dasturchi | Dasturiy muhandisman",
+    "projectsTitle": "Loyihalar — DevFayzullo",
+    "projectsDesc": "Ishimdan ayrim namunalari",
+    "contactTitle": "Bog‘lanish — DevFayzullo",
+    "contactDesc": "Keling, birga ishlaymiz!"
+  },
+
+  "hero": {
+    "titlePrefix": "Salom, men",
+    "name": "DevFayzullo",
+    "subtitle": "Frontend Dasturchi | Dasturiy muhandis",
+    "cta": "Loyihalarni ko‘rish",
+    "resume": "Rezyumeni yuklab olish"
+  },
+
+  "about": {
+    "heading": "Men Frontend dasturchi | Dasturiy muhandisman",
+    "body": "<b>React.js</b>, <b>Tailwind CSS</b> va zamonaviy web texnologiyalari bilan qulay va ishonchli interfeyslar yarataman. Hozirda <b>TypeScript</b> va <b>Next.js</b> bo‘yicha bilimlarimni chuqurlashtirib, kengaytiriladigan va ishlab chiqarishga tayyor ilovalar qurishga e’tibor qaratmoqdaman.",
+    "learnMore": "Batafsil",
+    "contactMe": "Menga yozing"
+  },
+
+  "skills": {
+    "heading": "Ko‘nikmalar",
+    "sub": "Qo‘llanadigan texnologiyalar",
+    "items": [
+      "React", "Tailwind CSS", "Redux Toolkit", "TypeScript (o‘rganilmoqda)",
+      "Next.js (asosiy)", "JavaScript (ES6+)", "Git / GitHub", "REST API"
+    ]
+  },
+
+  "projects": {
+    "heading": "Loyihalar",
+    "lead": "Ishimdan ayrim namunalari",
+    "live": "Live",
+    "code": "Repo"
+  },
+
+  "contact": {
+    "heading": "Menga bog‘laning",
+    "sub": "Keling, birga ishlaymiz!",
+    "openPage": "Kontakt sahifasini ochish",
+    "send": "Xabar yuborish",
+    "sending": "Yuborilmoqda..."
+  },
+
+  "form": {
+    "name": "Ismingiz",
+    "email": "Email",
+    "message": "Loyihangiz haqida yozing..."
+  },
+
+  "footer": {
+    "rights": "© 2025 DevFayzullo. Barcha huquqlar himoyalangan.",
+    "resumeEn": "Rezyume (EN)",
+    "resumeKr": "Rezyume (KR)"
+  }
+}
