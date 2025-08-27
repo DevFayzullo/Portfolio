@@ -11,8 +11,8 @@ export default function LanguageSwitcher() {
   ];
 
   const base =
-    "px-3 py-1 rounded-xl text-sm text-gray-300 hover:text-white hover:bg-white/10 transition";
-  const active = " bg-white/10 text-white";
+    "px-3 py-2 rounded-xl transition-colors hover:bg-gray-100 dark:hover:bg-gray-800";
+  const active = " bg-gray-100 dark:bg-gray-800";
 
   const change = (lng) => {
     i18n.changeLanguage(lng);
@@ -22,10 +22,11 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-1">
       {langs.map((l) => (
         <button
           key={l.code}
+          type="button"
           onClick={() => change(l.code)}
           className={base + (current === l.code ? active : "")}
           aria-current={current === l.code ? "true" : "false"}
