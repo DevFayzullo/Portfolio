@@ -1,0 +1,137 @@
+{
+  "nav": { "home": "Home", "about": "About", "projects": "Projects", "contact": "Contact" },
+
+  "seo": {
+    "siteName": "DevFayzullo",
+    "homeTitle": "DevFayzullo — Frontend Developer",
+    "homeDesc": "Frontend Developer | Software Engineer",
+    "aboutTitle": "About — DevFayzullo",
+    "aboutDesc": "I’m a Frontend Developer | Software Engineer",
+    "projectsTitle": "Projects — DevFayzullo",
+    "projectsDesc": "Some highlights from my work",
+    "contactTitle": "Contact — DevFayzullo",
+    "contactDesc": "Let’s work together!"
+  },
+
+  "hero": {
+    "titlePrefix": "Hi, I’m",
+    "name": "DevFayzullo",
+    "subtitle": "Frontend Developer | Software Engineer",
+    "cta": "View Projects",
+    "resume": "Download Resume"
+  },
+
+  "about": {
+    "heading": "👤 I’m a Frontend Developer | Software Engineer",
+    "body": "Motivated and detail-oriented Frontend Developer with a strong foundation in React.js, Tailwind CSS, and modern web technologies. Passionate about building responsive, user-friendly interfaces and writing clean, maintainable code. Currently expanding expertise in TypeScript and Next.js to deliver scalable, production-ready applications. Seeking a junior frontend position to grow within a collaborative team.",
+    "skills": {
+      "title": "Technical Skills",
+      "languagesLabel": "Languages:",
+      "frameworksLabel": "Frameworks/Libraries:",
+      "toolsLabel": "Tools:",
+      "othersLabel": "Others:",
+      "languages": "HTML5, CSS3, JavaScript (ES6+), TypeScript",
+      "frameworks": "React.js, Next.js, Tailwind CSS, Bootstrap",
+      "tools": "Git, GitHub, Vite, Webpack, NPM, VS Code",
+      "others": "Responsive Design, REST APIs, JSON, UI/UX Design"
+    },
+    "education": {
+      "title": "Education",
+      "sunmoon": {
+        "title": "Sunmoon University — Korean Language Program",
+        "detail": "TOPIK 6"
+      },
+      "kyungbok": {
+        "title": "Kyungbok University — A.S. in Software Convergence",
+        "meta": "Gyeonggi-do, South Korea | Expected Graduation: Feb 2026 | GPA: 4.2 / 4.5"
+      },
+      "courseworkLabel": "Relevant Coursework:",
+      "coursework": "Data Structures, Algorithms, OOP, Web Development, Database Systems, UI/UX Design"
+    },
+    "focus": {
+      "title": "Focus & Learning",
+      "item1": "Building accessible, responsive UIs with clean, reusable components",
+      "item2": "Deepening TypeScript for safer, scalable codebases",
+      "item3": "Learning Next.js (SSR/SSG/ISR) for SEO and production readiness",
+      "item4": "Improving performance: code-splitting, lazy loading, memoization"
+    },
+    "btn": {
+      "viewProjects": "View Projects",
+      "contact": "Contact Me",
+      "downloadCv": "Download Resume",
+      "viewResume": "Resume-KR"
+    }
+  },
+
+  "aboutSection": {
+    "heading": "👤 I’m a Frontend Developer | Software Engineer",
+    "body": "Motivated Frontend Developer with experience in {{react}}, {{tailwind}}, and modern web technologies. Currently expanding expertise in {{ts}} and {{next}} to deliver scalable, production-ready applications.",
+    "learnMore": "Learn More",
+    "contact": "Contact Me"
+  },
+  
+  "skillsSection": {
+    "title": "Skills",
+    "subtitle": "Technologies I work with",
+    "items": [
+      "React",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "TypeScript (learning)",
+      "Next.js (basic)",
+      "JavaScript (ES6+)",
+      "Git / GitHub",
+      "REST APIs"
+    ]
+  },
+
+  "projects": {
+    "heading": "Projects",
+    "lead": "Things I’ve built and shipped.",
+    "leadCompact": "Some highlights from my work",
+    "live": "Live Demo",
+    "repo": "Repository",
+    "repoShort": "Repo",
+    "related": "Related Projects",
+    "highlights": "Highlights",
+    "seeAll": "See all projects",
+    "openProjectAria": "Open {{title}}",
+    "cta": {
+      "backToProjects": "Back to Projects",
+      "home": "Home"
+    },
+    "notFound": {
+      "title": "Project not found",
+      "body": "The project you’re looking for doesn’t exist or is private."
+    }
+  },
+
+  "contact": {
+    "heading": "Contact Me",
+    "sub": "Let’s work together!",
+    "send": "Send Message",
+    "sending": "Sending…",
+    "success": "Thanks! Your message was sent successfully.",
+    "error": "Oops, something went wrong. Please try again or email me directly.",
+    "openPage": "Open Contact Page",
+    "openPageAria": "Open Contact page",
+    "telegram": "Telegram Blog",
+    "telegramAria": "Open Telegram blog",
+    "naver": "Naver Blog",
+    "naverAria": "Open Naver blog"
+  },
+  "form": {
+    "nameLabel": "Name",
+    "emailLabel": "Email",
+    "messageLabel": "Message",
+    "name": "Your name",
+    "email": "you@example.com",
+    "message": "Tell me about your project…"
+  },
+
+  "footer": {
+    "rights": "© {{year}} DevFayzullo. All rights reserved.",
+    "resumeEn": "Resume (EN)",
+    "resumeKr": "Resume (KR)"
+  }
+}

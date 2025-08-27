@@ -1,28 +1,51 @@
 import { useTranslation } from "react-i18next";
 import SEO from "@/components/SEO.jsx";
 
+// Sektsiyalar (eski kabi home sahifada ko‘rsatiladi)
+import AboutSection from "@/sections/AboutSection.jsx";
+import SkillsSection from "@/sections/SkillsSection.jsx";
+import ProjectsSection from "@/sections/ProjectsSection.jsx";
+import ContactSection from "@/sections/ContactSection.jsx";
+
 export default function Home() {
   const { t } = useTranslation();
 
   return (
     <>
       <SEO page="home" url="/" />
-      <section className="container pt-28 pb-24 text-center">
-        <h1 className="display-hero">
-          {t("hero.titlePrefix")} <span className="text-white"> </span>
+
+      {/* ESki hero layout: full-height, center, 2 CTA */}
+      <section
+        id="hero"
+        className="min-h-screen flex flex-col justify-center items-center text-center px-6">
+        <h1 className="text-4xl md:text-6xl font-bold">
+          {t("hero.titlePrefix")}{" "}
           <span className="text-[var(--color-primary)]">{t("hero.name")}</span>
         </h1>
-        <p className="mt-4 subtle text-lg">{t("hero.subtitle")}</p>
+        <p className="mt-4 text-lg text-gray-600 dark:text-gray-300">
+          {t("hero.subtitle")}
+        </p>
 
-        <div className="mt-8 flex items-center justify-center gap-3">
-          <a href="/projects" className="btn btn-primary">
+        <div className="mt-6 flex gap-4">
+          <a
+            href="#projects"
+            className="px-5 py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition">
             {t("hero.cta")}
           </a>
-          <a href="/resume.pdf" className="btn btn-outline">
+          <a
+            href="/resume/resume.pdf"
+            download
+            className="px-5 py-3 border rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition">
             {t("hero.resume")}
           </a>
         </div>
       </section>
+
+      {/* ESki sahifa bloklari: compact/ full kombinatsiyasi */}
+      <AboutSection variant="compact" />
+      <SkillsSection />
+      <ProjectsSection variant="compact" />
+      <ContactSection variant="compact" />
     </>
   );
 }

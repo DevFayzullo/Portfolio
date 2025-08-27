@@ -9,16 +9,8 @@ import {
 } from "lucide-react";
 
 const socials = [
-  {
-    name: "Email",
-    href: "mailto:fayzullo.coder@gmail.com",
-    icon: Mail,
-  },
-  {
-    name: "GitHub",
-    href: "https://github.com/DevFayzullo",
-    icon: Github,
-  },
+  { name: "Email", href: "mailto:fayzullo.coder@gmail.com", icon: Mail },
+  { name: "GitHub", href: "https://github.com/DevFayzullo", icon: Github },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/abduganiev-fayzullo",
@@ -29,28 +21,22 @@ const socials = [
     href: "https://instagram.com/abduganiyevfayzullo",
     icon: Instagram,
   },
-  {
-    name: "X",
-    href: "https://x.com/FayzulloDev",
-    icon: Twitter,
-  },
-];
-
-const resumes = [
-  {
-    name: "Resume (EN)",
-    href: "/resume/resume.pdf",
-  },
-  {
-    name: "Resume (KR)",
-    href: "/resume/resume-kr.pdf",
-  },
+  { name: "X", href: "https://x.com/FayzulloDev", icon: Twitter },
 ];
 
 export default function Footer() {
+  const { t } = useTranslation();
+  const year = new Date().getFullYear();
+
+  const resumes = [
+    { name: t("footer.resumeEn"), href: "/resume/resume.pdf" },
+    { name: t("footer.resumeKr"), href: "/resume/resume-kr.pdf" },
+  ];
+
   return (
     <footer className="mt-24">
       <hr className="border-gray-200 dark:border-gray-700" />
+
       {/* Social icons */}
       <div className="max-w-6xl mx-auto px-4 md:px-6 py-8 flex justify-center">
         <ul className="flex items-center gap-5">
@@ -97,7 +83,8 @@ export default function Footer() {
       </div>
 
       <div className="py-6 text-sm flex items-center justify-center">
-        <p>© {new Date().getFullYear().t("footer.rights")}</p>
+        {/* i18n interpolation: "© {{year}} DevFayzullo. All rights reserved." */}
+        <p>{t("footer.rights", { year })}</p>
       </div>
     </footer>
   );
