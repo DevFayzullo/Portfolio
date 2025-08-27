@@ -8,14 +8,12 @@ export default function ProjectDetail() {
   const { slug } = useParams();
   const { t } = useTranslation();
 
-  // Normalize data array
   const list = Array.isArray(projectsData)
     ? projectsData
     : Array.isArray(projectsData?.items)
     ? projectsData.items
     : [];
 
-  // Find project by slug OR id, hide "hidden"
   const { project, related } = useMemo(() => {
     const p = list.find(
       (x) =>
@@ -89,7 +87,6 @@ export default function ProjectDetail() {
       />
 
       <article className="mt-16 px-6 max-w-5xl mx-auto">
-        {/* Breadcrumb (eski dizayn) */}
         <nav className="text-sm text-gray-600 dark:text-gray-400">
           <Link to="/" className="hover:underline">
             {t("nav.home")}
@@ -104,7 +101,6 @@ export default function ProjectDetail() {
           </span>
         </nav>
 
-        {/* Header */}
         <header className="mt-4">
           <h1 className="text-3xl font-bold">{project.title}</h1>
           {project.short && (
@@ -113,7 +109,6 @@ export default function ProjectDetail() {
             </p>
           )}
 
-          {/* Meta chips */}
           <div className="mt-4 flex flex-wrap gap-2">
             {project.year && (
               <span className="px-3 py-1 rounded-full text-xs bg-gray-100 dark:bg-gray-800">
@@ -140,7 +135,6 @@ export default function ProjectDetail() {
           </div>
         </header>
 
-        {/* Cover */}
         {project.cover && (
           <div className="mt-6 overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800">
             <img
@@ -152,7 +146,6 @@ export default function ProjectDetail() {
           </div>
         )}
 
-        {/* Highlights */}
         {project.highlights?.length > 0 && (
           <section className="mt-8">
             <h2 className="text-xl font-semibold">
@@ -166,7 +159,6 @@ export default function ProjectDetail() {
           </section>
         )}
 
-        {/* Links */}
         {(live || code) && (
           <section className="mt-8">
             <div className="flex flex-wrap gap-3">
@@ -191,8 +183,6 @@ export default function ProjectDetail() {
             </div>
           </section>
         )}
-
-        {/* Related */}
         {related.length > 0 && (
           <section className="mt-12">
             <h3 className="text-lg font-semibold">{t("projects.related")}</h3>
@@ -223,7 +213,6 @@ export default function ProjectDetail() {
           </section>
         )}
 
-        {/* Back */}
         <div className="mt-10">
           <Link
             to="/projects"

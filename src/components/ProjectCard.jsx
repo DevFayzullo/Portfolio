@@ -8,7 +8,6 @@ export default function ResumeButtons({
 
   return (
     <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
-      {/* Download Resume (EN) eski dizayndagi ikon bilan */}
       <a
         href={cvUrl}
         download
@@ -26,7 +25,6 @@ export default function ResumeButtons({
         {t("about.downloadCv")}
       </a>
 
-      {/* Download Resume (KR) eski dizayndagi flag + stil bilan */}
       <a
         href={resumeUrl}
         download

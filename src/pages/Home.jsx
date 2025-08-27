@@ -1,7 +1,6 @@
 import { useTranslation } from "react-i18next";
 import SEO from "@/components/SEO.jsx";
 
-// Sektsiyalar (eski kabi home sahifada ko‘rsatiladi)
 import AboutSection from "@/sections/AboutSection.jsx";
 import SkillsSection from "@/sections/SkillsSection.jsx";
 import ProjectsSection from "@/sections/ProjectsSection.jsx";
@@ -14,7 +13,6 @@ export default function Home() {
     <>
       <SEO page="home" url="/" />
 
-      {/* ESki hero layout: full-height, center, 2 CTA */}
       <section
         id="hero"
         className="min-h-screen flex flex-col justify-center items-center text-center px-6">
@@ -41,7 +39,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ESki sahifa bloklari: compact/ full kombinatsiyasi */}
       <AboutSection variant="compact" />
       <SkillsSection />
       <ProjectsSection variant="compact" />

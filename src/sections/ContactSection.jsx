@@ -7,7 +7,6 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="mt-24 px-6 text-center">
-      {/* Eski SectionTitle o‘rniga i18n bilan sarlavha/subtitle */}
       <h2 className="text-3xl md:text-4xl font-bold">
         📬 {t("contact.heading")}
       </h2>

@@ -35,7 +35,6 @@ export default function Contact() {
 
       <section className="mt-24 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          {/* Eski SectionTitle o‘rniga i18n bilan sarlavha/subtitle */}
           <h1 className="text-3xl md:text-4xl font-bold">
             📬 {t("contact.heading")}
           </h1>
@@ -48,7 +47,6 @@ export default function Contact() {
           ref={formRef}
           onSubmit={onSubmit}
           className="mx-auto mt-8 max-w-xl space-y-4 rounded-2xl border border-gray-200 dark:border-gray-800 p-6">
-          {/* Honeypot */}
           <input
             type="text"
             name="_gotcha"

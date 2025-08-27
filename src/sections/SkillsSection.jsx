@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 export default function SkillsSection() {
   const { t } = useTranslation();
 
-  // i18n roʻyxatdan massivni olayapmiz
   const skills = t("skillsSection.items", { returnObjects: true });
 
   return (

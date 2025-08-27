@@ -83,7 +83,6 @@ export default function Footer() {
       </div>
 
       <div className="py-6 text-sm flex items-center justify-center">
-        {/* i18n interpolation: "© {{year}} DevFayzullo. All rights reserved." */}
         <p>{t("footer.rights", { year })}</p>
       </div>
     </footer>

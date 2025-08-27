@@ -5,7 +5,6 @@ import AppRouter from "@/routes/Router.jsx";
 export default function App() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100">
-      {/* Header fixed bo‘lgani uchun tepadan bo‘sh joy qoldiramiz */}
       <Header />
       <main className="pt-20">
         <AppRouter />

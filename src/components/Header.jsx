@@ -39,8 +39,6 @@ export default function Header() {
           <NavLink to="/contact" className={navClasses}>
             {t("nav.contact")}
           </NavLink>
-
-          {/* ⬇️ Tillar — har doim ko‘rinadi */}
           <LanguageSwitcher />
         </nav>
       </div>

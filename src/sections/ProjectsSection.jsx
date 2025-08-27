@@ -6,12 +6,10 @@ export default function ProjectsSection({ variant = "full" }) {
   const { t } = useTranslation();
   const isCompact = variant === "compact";
 
-  // 1) faqat public + order bo‘yicha (eski mantiq)
   const all = (Array.isArray(projectsData) ? projectsData : [])
     .filter((p) => p.visibility === "public")
     .sort((a, b) => (a.order ?? 0) - (b.order ?? 0));
 
-  // 2) compact: featured top 4, full: all
   const list = isCompact ? all.filter((p) => p.featured).slice(0, 4) : all;
 
   return (
@@ -40,7 +38,6 @@ export default function ProjectsSection({ variant = "full" }) {
                          hover:scale-[1.02] hover:shadow-lg
                          hover:border-gray-300 dark:hover:border-gray-700"
               aria-label={t("projects.openProjectAria", { title: p.title })}>
-              {/* Cover */}
               {p.cover && (
                 <img
                   src={p.cover}
@@ -56,7 +53,6 @@ export default function ProjectsSection({ variant = "full" }) {
                   {p.short}
                 </p>
 
-                {/* Meta chips */}
                 <div className="mt-3 flex flex-wrap gap-2">
                   {p.year && (
                     <span className="text-xs px-2 py-1 rounded-full bg-gray-100 dark:bg-gray-800">
@@ -77,7 +73,6 @@ export default function ProjectsSection({ variant = "full" }) {
                   ))}
                 </div>
 
-                {/* Links */}
                 {(p.links?.demo || p.links?.repo) && (
                   <div className="mt-4 flex gap-3">
                     {p.links.demo && (
@@ -107,7 +102,6 @@ export default function ProjectsSection({ variant = "full" }) {
           ))}
         </div>
 
-        {/* CTA for compact */}
         {isCompact && (
           <div className="mt-8 text-center">
             <Link

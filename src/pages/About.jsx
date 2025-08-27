@@ -20,9 +20,7 @@ export default function About() {
             {t("about.body")}
           </p>
 
-          {/* Technical Skills + Education */}
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {/* Technical Skills */}
             <div
               className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950
                             transition-transform transform-gpu duration-300 hover:scale-[1.02] hover:shadow-lg">
@@ -57,7 +55,6 @@ export default function About() {
               </ul>
             </div>
 
-            {/* Education */}
             <div
               className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950
                             transition-transform transform-gpu duration-300 hover:scale-[1.02] hover:shadow-lg">
@@ -91,7 +88,6 @@ export default function About() {
             </div>
           </div>
 
-          {/* Focus & Learning */}
           <div
             className="mt-10 rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950
                           transition-transform transform-gpu duration-300 hover:scale-[1.02] hover:shadow-lg">
@@ -104,7 +100,6 @@ export default function About() {
             </ul>
           </div>
 
-          {/* CTA Buttons */}
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
             <Link
               to="/projects"
@@ -122,7 +117,6 @@ export default function About() {
         </div>
       </section>
 
-      {/* Skills bo‘limi pastda alohida */}
       <SkillsSection />
     </>
   );
