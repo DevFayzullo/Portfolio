@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Manifest (relative path) -->
-    <link rel="manifest" href="manifest.webmanifest" />
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.webmanifest" />
     <meta name="theme-color" content="#0b1220" />
 
     <title>DevFayzullo — Frontend Developer | Software Engineer</title>
@@ -13,14 +13,11 @@
       name="description"
       content="Modern frontend portfolio showcasing React + Tailwind projects, case studies, and contact information." />
 
-    <link rel="canonical" href="https://devfayzullo.github.io/Portfolio/" />
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="pic/portfolio-icon.svg" />
-    <link rel="apple-touch-icon" href="icons/icon-192.png" />
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/svg+xml" href="/pic/portfolio-icon.svg" />
+    <link rel="apple-touch-icon" href="/icons/icon-192.png" />
 
     <!-- Theme -->
-    <meta name="theme-color" content="#0a0a0a" />
     <meta name="color-scheme" content="dark light" />
     <meta name="robots" content="index, follow" />
 
@@ -30,12 +27,10 @@
     <meta
       property="og:description"
       content="Modern frontend portfolio showcasing React + Tailwind projects, case studies, and contact information." />
-    <meta
-      property="og:url"
-      content="https://devfayzullo.github.io/Portfolio/" />
+    <meta property="og:url" content="https://<your-site>.netlify.app/" />
     <meta
       property="og:image"
-      content="https://devfayzullo.github.io/Portfolio/og-image.png" />
+      content="https://<your-site>.netlify.app/og-image.png" />
     <meta property="og:site_name" content="DevFayzullo Portfolio" />
 
     <!-- Twitter -->
@@ -46,10 +41,7 @@
       content="Modern frontend portfolio showcasing React + Tailwind projects, case studies, and contact information." />
     <meta
       name="twitter:image"
-      content="https://devfayzullo.github.io/Portfolio/og-image.png" />
-
-    <!-- Google Search Console -->
-    <meta name="google-site-verification" content="googlec875bb67ceeea08e" />
+      content="https://<your-site>.netlify.app/og-image.png" />
 
     <!-- JSON-LD: Person -->
     <script type="application/ld+json">
@@ -58,7 +50,7 @@
         "@type": "Person",
         "name": "DevFayzullo",
         "jobTitle": "Frontend Developer",
-        "url": "https://devfayzullo.github.io/Portfolio/",
+        "url": "https://<your-site>.netlify.app/",
         "sameAs": ["https://github.com/DevFayzullo"]
       }
     </script>
@@ -69,13 +61,13 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "DevFayzullo Portfolio",
-        "url": "https://devfayzullo.github.io/Portfolio/"
+        "url": "https://<your-site>.netlify.app/"
       }
     </script>
   </head>
   <body>
     <div id="root"></div>
-    <!-- entry point (relative, GitHub Pages uchun) -->
-    <script type="module" src="./src/main.jsx"></script>
+    <!-- Vite dev uchun /src/main.jsx; build paytida Vite o‘zi rewrite qiladi -->
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
