@@ -5,7 +5,7 @@ import SEO from "@/components/SEO.jsx";
 import projectsData from "@/data/projects.json";
 
 export default function ProjectDetail() {
-  const { slug } = useParams();
+  const params = useParams();
   const { t } = useTranslation();
 
   const list = Array.isArray(projectsData)
@@ -14,25 +14,34 @@ export default function ProjectDetail() {
     ? projectsData.items
     : [];
 
+  // URL kalit: slug yoki id bo‘lishi mumkin
+  const urlKey = decodeURIComponent(String(params.slug ?? params.id ?? ""))
+    .trim()
+    .toLowerCase();
+
   const { project, related } = useMemo(() => {
-    const p = list.find(
-      (x) =>
-        (String(x.slug) === String(slug) || String(x.id) === String(slug)) &&
-        x.visibility !== "hidden"
-    );
+    const p =
+      list.find(
+        (x) =>
+          x?.visibility !== "hidden" &&
+          (String(x?.slug ?? "").toLowerCase() === urlKey ||
+            String(x?.id ?? "").toLowerCase() === urlKey)
+      ) || null;
+
     const rel = p
       ? list
           .filter(
             (x) =>
-              x.id !== p.id &&
-              x.visibility !== "hidden" &&
-              (x.category === p.category || x.featured)
+              x?.id !== p.id &&
+              x?.visibility !== "hidden" &&
+              (x?.category === p.category || x?.featured)
           )
-          .sort((a, b) => (a.order ?? 0) - (b.order ?? 0))
+          .sort((a, b) => (a?.order ?? 0) - (b?.order ?? 0))
           .slice(0, 3)
       : [];
-    return { project: p || null, related: rel };
-  }, [list, slug]);
+
+    return { project: p, related: rel };
+  }, [list, urlKey]);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -183,16 +192,16 @@ export default function ProjectDetail() {
             </div>
           </section>
         )}
+
         {related.length > 0 && (
           <section className="mt-12">
             <h3 className="text-lg font-semibold">{t("projects.related")}</h3>
             <div className="mt-5 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
               {related.map((rp) => (
                 <Link
-                  to={`/projects/${rp.slug}`}
+                  to={`/projects/${encodeURIComponent(rp.slug ?? rp.id)}`}
                   key={rp.id}
-                  className="rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden
-                             transition-transform transform-gpu duration-300 hover:scale-[1.03] hover:shadow-md">
+                  className="rounded-2xl border border-gray-200 dark:border-gray-800 overflow-hidden transition-transform transform-gpu duration-300 hover:scale-[1.03] hover:shadow-md">
                   {rp.cover && (
                     <img
                       src={rp.cover}
