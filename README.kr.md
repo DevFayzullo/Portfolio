@@ -75,7 +75,7 @@ VITE_EMAILJS_PUBLIC_KEY=your_public_key
 
 ## 📸 스크린샷
 
-![Portfolio Preview](./public/pic/preview.png)
+![Portfolio Preview](./public/pic/preview-kr.png)
 
 ---
 
