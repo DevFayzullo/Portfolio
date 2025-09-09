@@ -1,0 +1,138 @@
+{
+  "nav": { "home": "홈", "about": "소개", "projects": "프로젝트", "contact": "연락처" },
+
+  "seo": {
+    "siteName": "DevFayzullo",
+    "homeTitle": "DevFayzullo — 프론트엔드 개발자",
+    "homeDesc": "프론트엔드 개발자 | 소프트웨어 엔지니어",
+    "aboutTitle": "소개 — DevFayzullo",
+    "aboutDesc": "저는 프론트엔드 개발자 | 소프트웨어 엔지니어입니다",
+    "projectsTitle": "프로젝트 — DevFayzullo",
+    "projectsDesc": "제가 작업한 하이라이트",
+    "contactTitle": "연락처 — DevFayzullo",
+    "contactDesc": "함께 일해요!"
+  },
+
+  "hero": {
+    "titlePrefix": "안녕하세요, 저는",
+    "name": "DevFayzullo",
+    "subtitle": "프론트엔드 개발자 | 소프트웨어 엔지니어",
+    "cta": "프로젝트 보기",
+    "resume": "이력서 다운로드"
+  },
+
+  "about": {
+    "heading": "👤 저는 프론트엔드 개발자 | 소프트웨어 엔지니어입니다",
+    "body": "동기 부여가 강하고 세부 사항에 주의를 기울이는 프론트엔드 개발자입니다. React.js, Tailwind CSS 및 최신 웹 기술에 탄탄한 기초를 가지고 있습니다. 반응형이고 사용자 친화적인 인터페이스를 구축하고, 깔끔하고 유지보수가 쉬운 코드를 작성하는 데 열정적입니다. 현재 TypeScript와 Next.js를 심화 학습하여 확장 가능하고 프로덕션 준비가 된 애플리케이션을 제공하고자 합니다. 협업적인 팀에서 성장할 수 있는 주니어 프론트엔드 포지션을 찾고 있습니다.",
+    "skills": {
+      "title": "기술 스킬",
+      "languagesLabel": "언어:",
+      "frameworksLabel": "프레임워크/라이브러리:",
+      "toolsLabel": "도구:",
+      "othersLabel": "기타:",
+      "languages": "HTML5, CSS3, JavaScript (ES6+), TypeScript",
+      "frameworks": "React.js, Next.js, Tailwind CSS, Bootstrap",
+      "tools": "Git, GitHub, Vite, Webpack, NPM, VS Code",
+      "others": "반응형 디자인, REST API, JSON, UI/UX 디자인"
+    },
+    "education": {
+      "title": "학력",
+      "sunmoon": {
+        "title": "선문대학교 — 한국어 과정",
+        "detail": "TOPIK 6"
+      },
+      "kyungbok": {
+        "title": "경복대학교 — 소프트웨어 융합 전공 전문학사",
+        "meta": "경기도, 대한민국 | 졸업 예정: 2026년 2월 | GPA: 4.2 / 4.5"
+      },
+      "courseworkLabel": "관련 과목:",
+      "coursework": "자료구조, 알고리즘, OOP, 웹 개발, 데이터베이스 시스템, UI/UX 디자인"
+    },
+    "focus": {
+      "title": "집중 & 학습",
+      "item1": "재사용 가능한 컴포넌트로 접근 가능하고 반응형 UI 구축",
+      "item2": "더 안전하고 확장 가능한 코드베이스를 위한 TypeScript 심화",
+      "item3": "SEO 및 프로덕션을 위한 Next.js (SSR/SSG/ISR) 학습",
+      "item4": "성능 향상: 코드 분할, 지연 로딩, 메모이제이션"
+    },
+    "btn": {
+      "viewProjects": "프로젝트 보기",
+      "contact": "문의하기",
+      "downloadCv": "이력서 다운로드",
+      "viewResume": "이력서-KR"
+    }
+  },
+
+  "aboutSection": {
+    "heading": "👤 저는 프론트엔드 개발자 | 소프트웨어 엔지니어입니다",
+    "body": "{{react}}, {{tailwind}} 및 최신 웹 기술 경험이 있습니다. 현재 {{ts}}와 {{next}}를 심화 학습하여 확장 가능하고 프로덕션 준비가 된 애플리케이션을 만드는 데 집중하고 있습니다.",
+    "learnMore": "더 알아보기",
+    "contact": "문의하기"
+  },
+  
+  "skillsSection": {
+    "title": "스킬",
+    "subtitle": "사용하는 기술 스택",
+    "items": [
+      "React",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "TypeScript (학습 중)",
+      "Next.js (기초)",
+      "JavaScript (ES6+)",
+      "Git / GitHub",
+      "REST API"
+    ]
+  },
+
+  "projects": {
+    "heading": "프로젝트",
+    "lead": "제가 만들고 배포한 작업들입니다.",
+    "leadCompact": "작업 중 하이라이트 모음",
+    "live": "라이브 데모",
+    "repo": "레포지토리",
+    "repoShort": "레포",
+    "related": "관련 프로젝트",
+    "highlights": "하이라이트",
+    "seeAll": "전체 프로젝트 보기",
+    "openProjectAria": "{{title}} 열기",
+    "cta": {
+      "backToProjects": "프로젝트로 돌아가기",
+      "home": "홈"
+    },
+    "notFound": {
+      "title": "프로젝트를 찾을 수 없습니다",
+      "body": "찾고 있는 프로젝트가 존재하지 않거나 비공개입니다."
+    }
+  },
+
+  "contact": {
+    "heading": "문의하기",
+    "sub": "함께 일해요!",
+    "send": "메시지 보내기",
+    "sending": "보내는 중…",
+    "success": "감사합니다! 메시지가 성공적으로 전송되었습니다.",
+    "error": "문제가 발생했습니다. 다시 시도하거나 이메일로 연락해 주세요.",
+    "openPage": "문의 페이지 열기",
+    "openPageAria": "문의 페이지 열기",
+    "telegram": "텔레그램 블로그",
+    "telegramAria": "텔레그램 블로그 열기",
+    "naver": "네이버 블로그",
+    "naverAria": "네이버 블로그 열기"
+  },
+
+  "form": {
+    "nameLabel": "이름",
+    "emailLabel": "이메일",
+    "messageLabel": "메시지",
+    "name": "이름을 입력하세요",
+    "email": "you@example.com",
+    "message": "프로젝트에 대해 알려 주세요…"
+  },
+
+  "footer": {
+    "rights": "© 2025 DevFayzullo. 모든 권리 보유.",
+    "resumeEn": "이력서 (EN)",
+    "resumeKr": "이력서 (KR)"
+  }
+}

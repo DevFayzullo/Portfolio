@@ -1,0 +1,76 @@
+[
+  {
+    "id": "rest-countries",
+    "title": "Rest Countries Explorer",
+    "slug": "rest-countries-explorer",
+    "short": "Single‑page app to browse and filter countries with an a11y‑friendly UI and theme toggle.",
+    "stack": ["React", "Vite", "Tailwind"],
+    "role": "Frontend",
+    "year": 2025,
+    "links": {
+      "demo": "https://devfayzullo.github.io/rest-countries-explorer/",
+      "repo": "https://github.com/DevFayzullo/rest-countries-explorer"
+    },
+    "highlights": ["Dark/Light mode", "Search & Filter", "Accessible navigation"],
+    "category": "Web App",
+    "featured": true,
+    "visibility": "public",
+    "order": 1,
+    "cover": "/projects/rest-countries/cover.webp"
+  },
+  {
+    "id": "chatbot-ui",
+    "title": "Static ChatBot UI",
+    "slug": "chatbot-ui",
+    "short": "Modern, responsive chat interface with predefined flows, keyboard navigation, and subtle animations.",
+    "stack": ["React", "Vite", "Tailwind", "Framer Motion"],
+    "role": "Frontend",
+    "year": 2025,
+    "links": {
+      "repo": "https://github.com/DevFayzullo/chatbot-ui"
+    },
+    "highlights": ["Typing indicator", "A11y keyboard nav", "Mobile‑first layout"],
+    "category": "UI/UX",
+    "featured": true,
+    "visibility": "public",
+    "order": 2,
+    "cover": "/projects/chatbot-ui/cover.webp"
+  },
+  {
+    "id": "ecommerce",
+    "title": "Mini Store (Cart & Checkout)",
+    "slug": "mini-store",
+    "short": "E‑commerce flow with product list, cart, checkout, and form validation.",
+    "stack": ["HTML", "CSS", "JavaScript"],
+    "role": "Frontend",
+    "year": 2024,
+    "links": {
+      "demo": "https://devfayzullo.github.io/E-Commerce-Project/",
+      "repo": "https://github.com/DevFayzullo/E-Commerce-Project"
+    },
+    "highlights": ["Cart state", "Checkout form", "Responsive UI"],
+    "category": "Web App",
+    "featured": false,
+    "visibility": "public",
+    "order": 4,
+    "cover": "/projects/mini-store/cover.webp"
+  },
+  {
+    "id": "healthypentagon",
+    "title": "HealthyPentagon",
+    "slug": "healthy-pentagon",
+    "short": "Healthy diet & product review platform (JSP + MySQL + Tomcat).",
+    "stack": ["JSP", "MySQL", "Tomcat"],
+    "role": "Fullstack",
+    "year": 2024,
+    "links": {
+      "repo": "https://github.com/DevFayzullo/HealthyPentagon"
+    },
+    "highlights": ["Auth & CRUD", "Relational schema", "Server‑rendered views"],
+    "category": "Fullstack",
+    "featured": false,
+    "visibility": "public",
+    "order": 5,
+    "cover": "/projects/healthy-pentagon/cover.webp"
+  }
+]

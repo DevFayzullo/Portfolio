@@ -1,0 +1,137 @@
+{
+  "nav": { "home": "Bosh sahifa", "about": "Haqida", "projects": "Loyihalar", "contact": "Bog‘lanish" },
+
+  "seo": {
+    "siteName": "DevFayzullo",
+    "homeTitle": "DevFayzullo — Frontend Dasturchi",
+    "homeDesc": "Frontend Dasturchi | Dasturiy muhandis",
+    "aboutTitle": "Haqida — DevFayzullo",
+    "aboutDesc": "Men Frontend dasturchi | Dasturiy muhandisman",
+    "projectsTitle": "Loyihalar — DevFayzullo",
+    "projectsDesc": "Ishimdan ayrim namunalari",
+    "contactTitle": "Bog‘lanish — DevFayzullo",
+    "contactDesc": "Keling, birga ishlaymiz!"
+  },
+
+  "hero": {
+    "titlePrefix": "Salom, men",
+    "name": "DevFayzullo",
+    "subtitle": "Frontend dasturchi | Dasturiy muhandis",
+    "cta": "Loyihalarni ko‘rish",
+    "resume": "Rezyumeni yuklab olish"
+  },
+
+  "about": {
+    "heading": "👤 Men Frontend Dasturchi | Dasturiy muhandis",
+    "body": "Motivatsiyaga ega va tafsilotlarga e’tiborli Frontend dasturchi. React.js, Tailwind CSS va zamonaviy veb texnologiyalarda mustahkam poydevorga ega. Javob beruvchi va foydalanuvchi uchun qulay interfeyslar yaratishga, toza va oson tushunarli kod yozishga ishtiyoqli. Hozirda TypeScript va Next.js bo‘yicha bilimlarini kengaytirib, kengaytiriladigan va ishlab chiqarishga tayyor ilovalar yaratishga intilmoqda. Hamkorlikdagi jamoada o‘sish uchun junior frontend lavozimini izlamoqda.",
+    "skills": {
+      "title": "Texnik Ko‘nikmalar",
+      "languagesLabel": "Tillar:",
+      "frameworksLabel": "Framework/Kutubxonalar:",
+      "toolsLabel": "Asboblar:",
+      "othersLabel": "Boshqalar:",
+      "languages": "HTML5, CSS3, JavaScript (ES6+), TypeScript",
+      "frameworks": "React.js, Next.js, Tailwind CSS, Bootstrap",
+      "tools": "Git, GitHub, Vite, Webpack, NPM, VS Code",
+      "others": "Moslashuvchan dizayn, REST API’lar, JSON, UI/UX Dizayn"
+    },
+    "education": {
+      "title": "Ta’lim",
+      "sunmoon": {
+        "title": "Sunmoon Universiteti — Koreys Tili Dasturi",
+        "detail": "TOPIK 6"
+      },
+      "kyungbok": {
+        "title": "Kyungbok Universiteti — Dasturiy Konvergentsiyada A.S.",
+        "meta": "Gyeonggi-do, Janubiy Koreya | Kutilayotgan bitirish: 2026-yil fevral | GPA: 4.2 / 4.5"
+      },
+      "courseworkLabel": "Asosiy Fanlar:",
+      "coursework": "Ma’lumot tuzilmalari, Algoritmlar, OOP, Veb Dasturlash, Ma’lumotlar Bazalari, UI/UX Dizayn"
+    },
+    "focus": {
+      "title": "Yo‘nalish & O‘rganish",
+      "item1": "Toza va qayta foydalaniladigan komponentlar bilan javob beruvchi UI’lar qurish",
+      "item2": "Xavfsiz va kengaytiriladigan kodlar uchun TypeScriptni chuqurlashtirish",
+      "item3": "SEO va ishlab chiqarish uchun Next.js (SSR/SSG/ISR) o‘rganish",
+      "item4": "Performance yaxshilash: code-splitting, lazy loading, memoization"
+    },
+    "btn": {
+      "viewProjects": "Loyihalarni Ko‘rish",
+      "contact": "Menga Bog‘lanish",
+      "downloadCv": "Rezyumeni Yuklab Olish",
+      "viewResume": "Rezyume-KR"
+    }
+  },
+
+  "aboutSection": {
+    "heading": "👤 Men Frontend Dasturchi | Dasturiy muhandis",
+    "body": "Tajriba: {{react}}, {{tailwind}} va zamonaviy veb texnologiyalar. Hozirda {{ts}} va {{next}} bo‘yicha bilimlarni chuqurlashtirib, kengaytiriladigan va ishlab chiqarishga tayyor ilovalar yaratishga e’tibor qaratgan.",
+    "learnMore": "Batafsil",
+    "contact": "Menga bog‘lanish"
+  },
+  "skillsSection": {
+    "title": "Ko‘nikmalar",
+    "subtitle": "Ishlaydigan texnologiyalarim",
+    "items": [
+      "React",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "TypeScript (o‘rganilmoqda)",
+      "Next.js (boshlang‘ich)",
+      "JavaScript (ES6+)",
+      "Git / GitHub",
+      "REST API’lar"
+    ]
+  },
+
+  "projects": {
+    "heading": "Loyihalar",
+    "lead": "Qurgan va ishga tushirgan ishlanmalarim.",
+    "leadCompact": "Ishimdan ayrim diqqatga sazovor qismlar",
+    "live": "Jonli Demo",
+    "repo": "Repository",
+    "repoShort": "Repo",
+    "related": "O‘xshash loyihalar",
+    "highlights": "Asosiy jihatlar",
+    "seeAll": "Barcha loyihalar",
+    "openProjectAria": "{{title}} loyihasini ochish",
+    "cta": {
+      "backToProjects": "Loyihalarga qaytish",
+      "home": "Bosh sahifa"
+    },
+    "notFound": {
+      "title": "Loyiha topilmadi",
+      "body": "Qidirayotgan loyihangiz mavjud emas yoki yashirin."
+    }
+  },
+
+  "contact": {
+    "heading": "Menga bog‘laning",
+    "sub": "Keling, birga ishlaymiz!",
+    "send": "Xabar yuborish",
+    "sending": "Yuborilmoqda…",
+    "success": "Rahmat! Xabaringiz muvaffaqiyatli yuborildi.",
+    "error": "Afsus, xatolik yuz berdi. Iltimos, qayta urinib ko‘ring yoki menga bevosita email yozing.",
+    "openPage": "Kontakt sahifasini ochish",
+    "openPageAria": "Kontakt sahifasini ochish",
+    "telegram": "Telegram Blog",
+    "telegramAria": "Telegram blogni ochish",
+    "naver": "Naver Blog",
+    "naverAria": "Naver blogni ochish"
+  },
+
+  "form": {
+    "nameLabel": "Ism",
+    "emailLabel": "Email",
+    "messageLabel": "Xabar",
+    "name": "Ismingiz",
+    "email": "you@example.com",
+    "message": "Loyihangiz haqida yozing…"
+  },
+
+  "footer": {
+    "rights": "© {{year}} DevFayzullo. Barcha huquqlar himoyalangan.",
+    "resumeEn": "Rezyume (EN)",
+    "resumeKr": "Rezyume (KR)"
+  }
+}

@@ -1,24 +1,39 @@
-import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
-function ProjectCard({ name, description, link }) {
+export default function ResumeButtons({
+  cvUrl = "/resume/resume.pdf",
+  resumeUrl = "/resume/resume-kr.pdf",
+}) {
+  const { t } = useTranslation();
+
   return (
-    <motion.div
-      className="bg-white dark:bg-gray-800 text-gray-800 dark:text-white p-6 rounded-lg shadow-md hover:shadow-xl transition hover:scale-105 flex flex-col items-center"
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4 }}>
-      <h3 className="text-xl font-bold mb-2">{name}</h3>
-      <p className="mb-4">{description}</p>
+    <div className="mt-6 flex items-center justify-center gap-3 flex-wrap">
       <a
-        href={link}
-        s
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-        View on GITHUB
+        href={cvUrl}
+        download
+        className="inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold
+                   bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+        aria-label={t("about.downloadCv")}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-4 w-4"
+          viewBox="0 0 24 24"
+          fill="currentColor">
+          <path d="M12 3a1 1 0 011 1v9.586l2.293-2.293a1 1 0 111.414 1.414l-4.004 4.004a1 1 0 01-1.414 0l-4.004-4.004a1 1 0 111.414-1.414L11 13.586V4a1 1 0 011-1z" />
+          <path d="M5 20a1 1 0 100-2h14a1 1 0 100 2H5z" />
+        </svg>
+        {t("about.downloadCv")}
       </a>
-    </motion.div>
+
+      <a
+        href={resumeUrl}
+        download
+        className="inline-flex items-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold
+                   border border-gray-300 dark:border-gray-700
+                   hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+        aria-label={t("about.viewResume")}>
+        🇰🇷 {t("about.viewResume")}
+      </a>
+    </div>
   );
 }
-
-export default ProjectCard;

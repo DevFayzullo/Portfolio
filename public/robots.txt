@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://devfayzullo-s-portfolio.netlify.app//sitemap.xml
+Sitemap: https://devfayzullo.life/sitemap.xml
