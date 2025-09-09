@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Background -->
+  <rect width="120" height="120" rx="20" fill="#0f172a"></rect>
+  
+  <!-- Laptop body -->
+  <rect x="20" y="30" width="80" height="50" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="3"></rect>
+  
+  <!-- Screen text (centered) -->
+  <text x="50%" y="50%" font-size="22" text-anchor="middle" dominant-baseline="middle" fill="#38bdf8" font-family="monospace">&lt;F/&gt;</text>
+  
+  <!-- Laptop base -->
+  <rect x="10" y="82" width="100" height="10" rx="3" fill="#38bdf8"></rect>
+</svg>
