@@ -9,7 +9,6 @@ export default function Contact() {
   const formRef = useRef(null);
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
 
-  // EmailJS init (public key bilan)
   useEffect(() => {
     const pk = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
     if (pk) emailjs.init({ publicKey: pk });
@@ -28,7 +27,6 @@ export default function Contact() {
       );
       setStatus("success");
       formRef.current.reset();
-      // 6 soniyadan so‘ng statusni qayta "idle" ga tushirish (ixtiyoriy)
       setTimeout(() => setStatus("idle"), 6000);
     } catch (err) {
       console.error("EmailJS error:", err?.status, err?.text || err);
@@ -55,7 +53,6 @@ export default function Contact() {
           ref={formRef}
           onSubmit={onSubmit}
           className="mx-auto mt-8 max-w-xl space-y-4 rounded-2xl border border-gray-200 dark:border-gray-800 p-6">
-          {/* Honeypot anti-spam */}
           <input
             type="text"
             name="_gotcha"
@@ -72,7 +69,7 @@ export default function Contact() {
               <input
                 id="from_name"
                 type="text"
-                name="from_name" // EmailJS variable
+                name="from_name"
                 required
                 placeholder={t("form.name")}
                 className="w-full rounded-xl border px-4 py-2 dark:border-gray-700 dark:bg-gray-900"
@@ -86,7 +83,7 @@ export default function Contact() {
               <input
                 id="reply_to"
                 type="email"
-                name="reply_to" // EmailJS variable
+                name="reply_to"
                 required
                 placeholder={t("form.email")}
                 className="w-full rounded-xl border px-4 py-2 dark:border-gray-700 dark:bg-gray-900"
@@ -100,7 +97,7 @@ export default function Contact() {
             </label>
             <textarea
               id="message"
-              name="message" // EmailJS variable
+              name="message"
               required
               rows={6}
               placeholder={t("form.message")}
@@ -108,7 +105,6 @@ export default function Contact() {
             />
           </div>
 
-          {/* ixtiyoriy: sayt URL ni jo‘natish */}
           <input
             type="hidden"
             name="site_url"
@@ -126,7 +122,6 @@ export default function Contact() {
             {status === "loading" ? t("contact.sending") : t("contact.send")}
           </button>
 
-          {/* Aria live region: ekranni o‘quvchilar uchun holat */}
           <p className="sr-only" aria-live="polite">
             {status === "loading"
               ? "Sending"
