@@ -8,6 +8,7 @@ export default function LanguageSwitcher() {
     { code: "en", label: "EN" },
     { code: "ko", label: "KR" },
     { code: "uz", label: "UZ" },
+    { code: "ru", label: "RU" },
   ];
 
   const base =
