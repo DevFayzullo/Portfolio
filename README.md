@@ -9,7 +9,7 @@ Includes dark mode, contact form, blog links, and social media footer.
 
 ## 🌟 Features
 
-- 🌐 Multi-language support (EN · UZ · KO) with i18next
+- 🌐 Multi-language support (EN · UZ · KO · RU) with i18next
 - 🎨 Light and Dard Theme Design
 - 🖼️ Responsive layout with Tailwind CSS
 - 📂 Portfolio Projects Section (with GitHub links)
