@@ -5,13 +5,19 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import en from "@/locales/en/common.json";
 import ko from "@/locales/ko/common.json";
 import uz from "@/locales/uz/common.json";
+import ru from "@/locales/ru/common.json";
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    resources: { en: { common: en }, ko: { common: ko }, uz: { common: uz } },
-    supportedLngs: ["en", "ko", "uz"],
+    resources: {
+      en: { common: en },
+      ko: { common: ko },
+      uz: { common: uz },
+      ru: { common: ru },
+    },
+    supportedLngs: ["en", "ko", "uz", "ru"],
     fallbackLng: "en",
     ns: ["common"],
     defaultNS: "common",
