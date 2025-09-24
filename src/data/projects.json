@@ -1,5 +1,32 @@
 [
   {
+  "id": "spin-wheel",
+  "title": "Custom Spin Wheel",
+  "slug": "spin-wheel",
+  "short": "Interactive spin wheel game with custom items, multi-language support, and theme toggle.",
+  "stack": ["React", "Vite", "Tailwind"],
+  "role": "Frontend",
+  "year": 2025,
+  "links": {
+    "demo": "https://devfayzullo.github.io/spin-wheel/",
+    "repo": "https://github.com/DevFayzullo/spin-wheel"
+  },
+  "highlights": [
+    "Dark/Light mode toggle",
+    "Multi-language support (EN, UZ, KO, RU)",
+    "Custom items add/remove",
+    "Share, Export/Import list",
+    "Save result as image",
+    "Accessible & responsive design"
+  ],
+  "category": "Web App",
+  "featured": true,
+  "visibility": "public",
+  "order": 1,
+  "cover": "/projects/spin-wheel/cover.webp"
+}
+,
+  {
     "id": "rest-countries",
     "title": "Rest Countries Explorer",
     "slug": "rest-countries-explorer",
@@ -15,7 +42,7 @@
     "category": "Web App",
     "featured": true,
     "visibility": "public",
-    "order": 1,
+    "order": 2,
     "cover": "/projects/rest-countries/cover.webp"
   },
   {
@@ -33,7 +60,7 @@
     "category": "UI/UX",
     "featured": true,
     "visibility": "public",
-    "order": 2,
+    "order": 3,
     "cover": "/projects/chatbot-ui/cover.webp"
   },
   {
