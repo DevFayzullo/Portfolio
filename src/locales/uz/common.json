@@ -23,12 +23,12 @@
 
   "about": {
     "heading": "👤 Men Frontend Dasturchi | Dasturiy muhandis",
-    "body": "Motivatsiyaga ega va tafsilotlarga e’tiborli Frontend dasturchi. React.js, Tailwind CSS va zamonaviy veb texnologiyalarda mustahkam poydevorga ega. Javob beruvchi va foydalanuvchi uchun qulay interfeyslar yaratishga, toza va oson tushunarli kod yozishga ishtiyoqli. Hozirda TypeScript va Next.js bo‘yicha bilimlarini kengaytirib, kengaytiriladigan va ishlab chiqarishga tayyor ilovalar yaratishga intilmoqda. Hamkorlikdagi jamoada o‘sish uchun junior frontend lavozimini izlamoqda.",
+    "body": "Motivatsiyaga ega va tafsilotlarga e’tiborli Frontend dasturchiman. React.js, Tailwind CSS va zamonaviy veb texnologiyalarda mustahkam poydevorga ega. Foydalanuvchi uchun qulay interfeyslar yaratishga, toza va oson tushunarli kod yozishga ishtiyoqli. Hozirda TypeScript va Next.js bo‘yicha bilimlarini kengaytirib, kengaytiriladigan va ishlab chiqarishga tayyor ilovalar yaratishga intiladigan dasturchiman. Hamkorlikdagi jamoada o‘sish uchun junior frontend lavozimidagi ish qidirmoqdaman.",
     "skills": {
       "title": "Texnik Ko‘nikmalar",
       "languagesLabel": "Tillar:",
       "frameworksLabel": "Framework/Kutubxonalar:",
-      "toolsLabel": "Asboblar:",
+      "toolsLabel": "Tools(vositalar):",
       "othersLabel": "Boshqalar:",
       "languages": "HTML5, CSS3, JavaScript (ES6+), TypeScript",
       "frameworks": "React.js, Next.js, Tailwind CSS, Bootstrap",
@@ -42,7 +42,7 @@
         "detail": "TOPIK 6"
       },
       "kyungbok": {
-        "title": "Kyungbok Universiteti — Dasturiy Konvergentsiyada A.S.",
+        "title": "Kyungbok Universiteti — Dasturiy Konvergentsiya.",
         "meta": "Gyeonggi-do, Janubiy Koreya | Kutilayotgan bitirish: 2026-yil fevral | GPA: 4.2 / 4.5"
       },
       "courseworkLabel": "Asosiy Fanlar:",
@@ -65,7 +65,7 @@
 
   "aboutSection": {
     "heading": "👤 Men Frontend Dasturchi | Dasturiy muhandis",
-    "body": "Tajriba: {{react}}, {{tailwind}} va zamonaviy veb texnologiyalar. Hozirda {{ts}} va {{next}} bo‘yicha bilimlarni chuqurlashtirib, kengaytiriladigan va ishlab chiqarishga tayyor ilovalar yaratishga e’tibor qaratgan.",
+    "body": "Tajriba: {{react}}, {{tailwind}} va zamonaviy veb texnologiyalar. Hozirda {{ts}} va {{next}} bo‘yicha bilimlarni chuqurlashtirib, kengaytiriladigan va ishlab chiqarishga tayyor ilovalar yaratishga e’tibor qaratgan dasturchiman.",
     "learnMore": "Batafsil",
     "contact": "Menga bog‘lanish"
   },
