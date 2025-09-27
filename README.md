@@ -3,7 +3,7 @@
 [🇰🇷 한국어 README](./README.kr.md)
 
 A modern, responsive personal portfolio built with **React**, **Tailwind CSS**, and **EmailJS**.  
-Includes dark mode, contact form, blog links, and social media footer.
+Includes dark mode, contact form, blog links, and social media footer
 
 ---
 
