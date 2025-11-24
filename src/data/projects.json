@@ -1,31 +1,65 @@
 [
   {
-  "id": "spin-wheel",
-  "title": "Custom Spin Wheel",
-  "slug": "spin-wheel",
-  "short": "Interactive spin wheel game with custom items, multi-language support, and theme toggle.",
-  "stack": ["React", "Vite", "Tailwind"],
-  "role": "Frontend",
-  "year": 2025,
-  "links": {
-    "demo": "https://devfayzullo.github.io/spin-wheel/",
-    "repo": "https://github.com/DevFayzullo/spin-wheel"
+    "id": "graphql-guestbook-realtime",
+    "title": "GraphQL Guestbook (Realtime)",
+    "slug": "graphql-guestbook-realtime",
+    "short": "Realtime GraphQL guestbook with Apollo subscriptions, optimistic UI, and modern Tailwind UI.",
+    "stack": [
+      "React",
+      "Vite",
+      "Tailwind",
+      "Apollo Client",
+      "Apollo Server",
+      "GraphQL",
+      "Node.js"
+    ],
+    "role": "Full Stack",
+    "year": 2025,
+    "links": {
+      "demo": "https://graphql-guestbook-realtime.vercel.app",
+      "repo": "https://github.com/DevFayzullo/graphql-guestbook-realtime"
+    },
+    "highlights": [
+      "GraphQL Query, Mutation, Subscription (realtime)",
+      "Apollo Client with HTTP + WebSocket split link",
+      "Optimistic UI and cache deduplication",
+      "Filter: All messages vs My messages",
+      "Responsive glassmorphism UI with auto dark mode",
+      "Deployed: Frontend (Vercel) · Backend (Render)"
+    ],
+    "category": "Full Stack App",
+    "featured": true,
+    "visibility": "public",
+    "order": 1,
+    "cover": "/projects/graphql-guestbook-realtime/cover.webp"
   },
-  "highlights": [
-    "Dark/Light mode toggle",
-    "Multi-language support (EN, UZ, KO, RU)",
-    "Custom items add/remove",
-    "Share, Export/Import list",
-    "Save result as image",
-    "Accessible & responsive design"
-  ],
-  "category": "Web App",
-  "featured": true,
-  "visibility": "public",
-  "order": 1,
-  "cover": "/projects/spin-wheel/cover.webp"
-}
-,
+
+  {
+    "id": "spin-wheel",
+    "title": "Custom Spin Wheel",
+    "slug": "spin-wheel",
+    "short": "Interactive spin wheel game with custom items, multi-language support, and theme toggle.",
+    "stack": ["React", "Vite", "Tailwind"],
+    "role": "Frontend",
+    "year": 2025,
+    "links": {
+      "demo": "https://devfayzullo.github.io/spin-wheel/",
+      "repo": "https://github.com/DevFayzullo/spin-wheel"
+    },
+    "highlights": [
+      "Dark/Light mode toggle",
+      "Multi-language support (EN, UZ, KO, RU)",
+      "Custom items add/remove",
+      "Share, Export/Import list",
+      "Save result as image",
+      "Accessible & responsive design"
+    ],
+    "category": "Web App",
+    "featured": true,
+    "visibility": "public",
+    "order": 2,
+    "cover": "/projects/spin-wheel/cover.webp"
+  },
   {
     "id": "rest-countries",
     "title": "Rest Countries Explorer",
@@ -38,11 +72,15 @@
       "demo": "https://devfayzullo.github.io/rest-countries-explorer/",
       "repo": "https://github.com/DevFayzullo/rest-countries-explorer"
     },
-    "highlights": ["Dark/Light mode", "Search & Filter", "Accessible navigation"],
+    "highlights": [
+      "Dark/Light mode",
+      "Search & Filter",
+      "Accessible navigation"
+    ],
     "category": "Web App",
     "featured": true,
     "visibility": "public",
-    "order": 2,
+    "order": 3,
     "cover": "/projects/rest-countries/cover.webp"
   },
   {
@@ -56,11 +94,15 @@
     "links": {
       "repo": "https://github.com/DevFayzullo/chatbot-ui"
     },
-    "highlights": ["Typing indicator", "A11y keyboard nav", "Mobile‑first layout"],
+    "highlights": [
+      "Typing indicator",
+      "A11y keyboard nav",
+      "Mobile‑first layout"
+    ],
     "category": "UI/UX",
     "featured": true,
     "visibility": "public",
-    "order": 3,
+    "order": 4,
     "cover": "/projects/chatbot-ui/cover.webp"
   },
   {
@@ -79,7 +121,7 @@
     "category": "Web App",
     "featured": false,
     "visibility": "public",
-    "order": 4,
+    "order": 5,
     "cover": "/projects/mini-store/cover.webp"
   },
   {
@@ -97,7 +139,7 @@
     "category": "Fullstack",
     "featured": false,
     "visibility": "public",
-    "order": 5,
+    "order": 6,
     "cover": "/projects/healthy-pentagon/cover.webp"
   }
 ]
