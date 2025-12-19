@@ -58,3 +58,4 @@
 - Add **unit tests** for form validation.
 - Improve **SEO** with `react-helmet-async`.
 - Consider adding a **Blog section** that auto-syncs with Telegram/Naver posts.
+- Need to add real projects
