@@ -59,3 +59,5 @@
 - Improve **SEO** with `react-helmet-async`.
 - Consider adding a **Blog section** that auto-syncs with Telegram/Naver posts.
 - Need to add real projects
+
+- need to made projects~~
